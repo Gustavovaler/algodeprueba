@@ -1,0 +1,20 @@
+.parra{
+    width: 90%;
+    margin: auto;
+}
+.seccion{
+    background-color: rgb(225, 248, 251);
+    border: 2px #5c5c5c;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.parra p{
+    font-size: 1.2em;
+}
+
+.participar{
+    width: 25%;
+    margin: auto;
+    margin-top: 15px;
+}
