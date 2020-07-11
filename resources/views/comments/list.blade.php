@@ -2,13 +2,57 @@
 
 @section('content')
 
+<link rel="stylesheet" href="{{asset('css/comun.css')}}">
+
+
 <div class="container">
 
     @foreach ($comments as $comment)
-    {{$comment->id}}<br>
-    {{$comment->comment_text}}
+    <div class="comment">
+        <div class="col ">
+            <div class="card ">
+                <div class="card-header">
+                    Autor: <b><i>{{$users[$comment->user_id-1]->name}} </i></b> . # {{$comment->id}}
+                </div>
+                <div class="card-body">
+                
+                <p class="card-text">{{$comment->comment_text}}</p>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    
         
     @endforeach
+
+    <div class="agregar_comentario mt-5">
+
+        @if (isset(Auth::user()->id))
+            <form action="/comments" method="POST">
+            @csrf
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                <div class="form-group">
+                    
+                    <textarea class="form-control"  name="comment_text" id="exampleFormControlTextarea1" rows="3"  placeholder="Deja tu comentario.." required></textarea>
+                </div>
+                
+                <hr>
+                <input type="submit" value="Comentar" class="btn btn-primary">
+            </form>
+        @else
+            <form action="/comments" method="POST">
+            @csrf
+            <div class="form-group">
+                    
+                <textarea class="form-control"  name="comment_text" id="exampleFormControlTextarea1" rows="3"  placeholder="Debes loguear para comentar" disabled></textarea>
+            </div>
+                <hr>                
+            </form><a href="/login" class="btn btn-primary">Comentar</a>       
+        @endif
+
+        
+    </div>
 
 
 </div>

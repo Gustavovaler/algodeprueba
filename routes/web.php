@@ -28,3 +28,5 @@ Route::get('/info', 'InfoController@index');
 Route::get('/extras', 'ExtrasController@index');
 
 Route::get('/comments', 'CommentController@index');
+
+Route::post('/comments', 'CommentController@store');

@@ -18,3 +18,14 @@
     margin: auto;
     margin-top: 15px;
 }
+
+
+/*   list.commnets ******************************************/
+
+.agregar_comentario{
+    width: 50%;
+
+}
+.comment{
+    width:50%;
+}
