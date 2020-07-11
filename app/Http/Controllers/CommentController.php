@@ -14,4 +14,8 @@ class CommentController extends Controller
 
         return view('comments.list', compact('comments'));
     }
+
+
+
+    public function store(Request $request)
 }
