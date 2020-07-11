@@ -24,4 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/developers', 'UserController@index');
 
 Route::get('/info', 'InfoController@index');
+
 Route::get('/extras', 'ExtrasController@index');
+
+Route::get('/comments', 'CommentController@index');

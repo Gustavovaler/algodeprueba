@@ -42,6 +42,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="/extras">Extras</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/comments">Voces</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
