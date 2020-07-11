@@ -12,7 +12,12 @@
         <div class="col ">
             <div class="card ">
                 <div class="card-header">
-                    Autor: <b><i>{{$users[$comment->user_id-1]->name}} </i></b> . # {{$comment->id}}
+
+                        @foreach ($users as $user)
+                            @if ($user->id == $comment->user_id)
+                            Autor: <b><i>{{$user->name}} </i></b> . # {{$comment->id}}
+                            @endif                            
+                        @endforeach                    
                 </div>
                 <div class="card-body">
                 
