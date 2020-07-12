@@ -37,3 +37,5 @@ Route::get('/comments', 'CommentController@index');
 
 Route::post('/comments', 'CommentController@store');
 
+Route::get('/recursos', 'ResController@index');
+

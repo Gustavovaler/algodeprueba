@@ -45,6 +45,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="/comments">Voces</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/recursos">Recursos</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
