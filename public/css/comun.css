@@ -26,6 +26,10 @@
     width: 50%;
 
 }
-.comment{
-    width:50%;
+
+
+@media (max-widht:750px){
+    .comment{
+        width:100%;
+    }
 }

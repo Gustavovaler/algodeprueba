@@ -15,7 +15,7 @@
 
                         @foreach ($users as $user)
                             @if ($user->id == $comment->user_id)
-                            Autor: <b><i>{{$user->name}} </i></b> . # {{$comment->id}}
+                            Autor: <b><i>{{$user->name}} </i></b> . <span class="float-right"> {{date('d/m/Y - h:i',strtotime($comment->created_at))}}</span>
                             @endif                            
                         @endforeach                    
                 </div>
