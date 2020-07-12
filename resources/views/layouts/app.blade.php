@@ -60,17 +60,24 @@
                                 </li>
                             @endif
                         @else
+                        {{-- <li >
+                            <img src="{{asset('img/user.png')}}" alt="" width="30px" style="margin-top: 4px;margin-right:10px;">
+                        </li> --}}
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                   <span class="caret"></span> <img src="{{asset('img/user.png')}}" alt="" width="30px" style="margin-right:3px;"> {{ Auth::user()->name }} 
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a href="" class="dropdown-item">Mi perfil</a>
+                                     <hr>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                        Salir
                                     </a>
+                                   
+                                    
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
