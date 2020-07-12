@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mt-4">
 
 
     <h1>Quienes Somos Hasta Ahora !</h1>

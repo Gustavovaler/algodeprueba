@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container mt-4">
         @foreach ($user_data as $user)
             <p>This is user {{ $user->name }}</p>
             <img src="{{asset('storage/img/avatar1.jpg')}}" alt="">

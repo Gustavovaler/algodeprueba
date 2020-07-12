@@ -5,10 +5,10 @@
 <link rel="stylesheet" href="{{asset('css/comun.css')}}">
 
 
-<div class="container">
+<div class="container mt-4">
 
     @foreach ($comments as $comment)
-    <div class="comment">
+    <div class="comment mt-2">
         <div class="col ">
             <div class="card ">
                 <div class="card-header">
@@ -53,7 +53,7 @@
                 <textarea class="form-control"  name="comment_text" id="exampleFormControlTextarea1" rows="3"  placeholder="Debes loguear para comentar" disabled></textarea>
             </div>
                 <hr>                
-            </form><a href="/login" class="btn btn-primary">Comentar</a>       
+            </form><a href="/login" class="btn btn-primary float-right">Comentar</a>       
         @endif
 
         

@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="{{asset('css/comun.css')}}">
 
-<div class="container">
+<div class="container mt-4">
 
     <div class="seccion">
     <h3>Basicamente....</h3>
