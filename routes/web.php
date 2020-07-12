@@ -23,6 +23,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/developers', 'UserController@index');
 
+Route::get('/developers/{id}', 'UserController@show')->middleware('auth');
+
+Route::get('/developers/{id}/perfil', 'UserController@self_show')->middleware('auth');
+
 Route::get('/info', 'InfoController@index');
 
 Route::get('/extras', 'ExtrasController@index');
@@ -30,3 +34,4 @@ Route::get('/extras', 'ExtrasController@index');
 Route::get('/comments', 'CommentController@index');
 
 Route::post('/comments', 'CommentController@store');
+

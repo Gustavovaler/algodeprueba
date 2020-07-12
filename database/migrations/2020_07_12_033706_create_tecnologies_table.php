@@ -15,7 +15,13 @@ class CreateTecnologiesTable extends Migration
     {
         Schema::create('tecnologies', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name_tec');
+            $table->boolean('active')->default(true);
+            $table->bigInteger('votes')->default(0);
+            $table->boolean('backend')->default(false);
+            $table->boolean('frontend')->default(false);
+            $table->boolean('other')->default(false);
+            
         });
     }
 
