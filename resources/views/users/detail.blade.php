@@ -1,8 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-    @foreach ($user_data as $user)
-        <p>This is user {{ $user->name }}</p>
-    @endforeach
+
+    <div class="container">
+        @foreach ($user_data as $user)
+            <p>This is user {{ $user->name }}</p>
+            <img src="{{asset('storage/img/avatar1.jpg')}}" alt="">
+        @endforeach
+
+
+
+
+    </div>
+    
     
 @endsection
