@@ -33,5 +33,9 @@ class UserController extends Controller
         return "false";
        
     }
+    public function store_perfil(Request $request, $id)
+    {
+        return view('home');
+    }
 
 }

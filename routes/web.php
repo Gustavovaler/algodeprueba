@@ -25,6 +25,8 @@ Route::get('/developers', 'UserController@index');
 
 Route::get('/developers/{id}', 'UserController@show')->middleware('auth');
 
+Route::post('/developers/{id}','UserController@store_perfil')->middleware('auth');
+
 Route::get('/developers/{id}/perfil', 'UserController@self_show')->middleware('auth');
 
 Route::get('/info', 'InfoController@index');
