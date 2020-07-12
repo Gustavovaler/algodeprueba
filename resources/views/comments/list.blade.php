@@ -53,7 +53,8 @@
                 <textarea class="form-control"  name="comment_text" id="exampleFormControlTextarea1" rows="3"  placeholder="Debes loguear para comentar" disabled></textarea>
             </div>
                 <hr>                
-            </form><a href="/login" class="btn btn-primary float-right">Comentar</a>       
+            </form>
+            <a href="/login" class="btn btn-primary float-right">Comentar</a>       
         @endif
 
         
