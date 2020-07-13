@@ -39,3 +39,10 @@ Route::post('/comments', 'CommentController@store');
 
 Route::get('/recursos', 'ResController@index');
 
+
+// ************ manager routes ************
+
+Route::get('/manager/{id}', 'ManagerController@index')->middleware('auth');
+
+
+
