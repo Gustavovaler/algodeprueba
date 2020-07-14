@@ -39,6 +39,8 @@ Route::post('/comments', 'CommentController@store');
 
 Route::get('/recursos', 'ResController@index');
 
+Route::resource('/clasificados', 'ClasificadosController');
+
 
 // ************ manager routes ************
 

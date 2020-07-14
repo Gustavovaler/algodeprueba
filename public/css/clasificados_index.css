@@ -1,0 +1,34 @@
+body{
+    box-sizing: border-box;
+}
+
+.main-section{
+    
+}
+
+.section-left{
+    
+    padding: 8px;
+    
+    -webkit-box-shadow: 1px 0px 33px -5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 0px 33px -5px rgba(0,0,0,0.3);
+    box-shadow: 1px 0px 33px -5px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
+.section-right{
+
+   
+    
+}
+.card{
+    margin-bottom: 4px;
+    -webkit-box-shadow: 4px 10px 33px -6px rgba(0,0,0,0.3);
+    -moz-box-shadow: 4px 10px 33px -6px rgba(0,0,0,0.3);
+    box-shadow: 4px 10px 33px -6px rgba(0,0,0,0.3);
+
+}

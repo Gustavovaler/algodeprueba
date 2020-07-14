@@ -61,6 +61,15 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="/recursos">Recursos</a>
                         </li>
+                        <li class="nav-item dropdown">
+                        <a id="clasificadosdropdown" class="nav-link dropdown-toggle active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                               <span class="caret"></span> Clasificados
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a href="" class="dropdown-item">Ofrecidos</a>
+                                <a class="dropdown-item" href=""> Pedidos </a>
+                            </div>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -76,9 +85,6 @@
                                 </li>
                             @endif
                         @else
-                        {{-- <li >
-                            <img src="{{asset('img/user.png')}}" alt="" width="30px" style="margin-top: 4px;margin-right:10px;">
-                        </li> --}}
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                    <span class="caret"></span> <img src="{{asset('img/user.png')}}" alt="" width="30px" style="margin-right:3px;"> {{ Auth::user()->name }} 

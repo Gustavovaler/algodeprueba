@@ -15,6 +15,10 @@
 
                         @foreach ($users as $user)
                             @if ($user->id == $comment->user_id)
+                                @if ($user->is_admin == 1)
+                                    <span class="badge badge-success"> Admin</span>
+                                @endif
+                           
                             Autor: <b><i>{{$user->name}} </i></b> . <span class="float-right"> {{date('d/m/Y - h:i',strtotime($comment->created_at))}}</span>
                             @endif                            
                         @endforeach                    
