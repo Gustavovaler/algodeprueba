@@ -37,6 +37,8 @@ Route::get('/comments', 'CommentController@index');
 
 Route::post('/comments', 'CommentController@store');
 
+Route::put('/comments/{id}', 'CommentController@update_like');
+
 Route::get('/recursos', 'ResController@index');
 
 Route::resource('/clasificados', 'ClasificadosController');

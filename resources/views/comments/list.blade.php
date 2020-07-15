@@ -33,8 +33,7 @@
                 
                 </div>
                 <div class="card-footer">
-                    <div class="float-right"> <a href="" class="mr-2"> Me gusta </a> <span class="badge badge-primary">{{$comment->likes}}</span></div>
-                </div>
+                   <span class="float-right"><Likes></Likes> <span class="badge badge-primary">{{$comment->likes}}</span></span>
             </div>
         </div>
     </div>
@@ -71,7 +70,7 @@
         
     </div>
 
-<Likes></Likes>
+
 
 </div>
     

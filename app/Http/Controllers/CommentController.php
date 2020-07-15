@@ -30,4 +30,13 @@ class CommentController extends Controller
         
         return view('comments.list', compact('comments', 'users'));
     }
+
+    public function update_like(Request $request, $id)
+    {
+        $comment = comments::find($id);
+        $coment_like = $comment->likes;
+        $comment->likes = $coment_like +1;
+        $comment->save();
+        
+    }
 }
