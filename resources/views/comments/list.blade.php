@@ -18,6 +18,10 @@
                                 @if ($user->is_admin == 1)
                                     <span class="badge badge-success"> Admin</span>
                                 @endif
+                                @if ($user->is_moderator == 1)
+                                    <span class="badge badge-warning"> Partner</span>
+                                @endif
+
                            
                             Autor: <b><i>{{$user->name}} </i></b> . <span class="float-right"> {{date('d/m/Y - h:i',strtotime($comment->created_at))}}</span>
                             @endif                            
@@ -27,6 +31,9 @@
                 
                 <p class="card-text">{{$comment->comment_text}}</p>
                 
+                </div>
+                <div class="card-footer">
+                    <div class="float-right"> <a href="" class="mr-2"> Me gusta </a> <span class="badge badge-primary">{{$comment->likes}}</span></div>
                 </div>
             </div>
         </div>
