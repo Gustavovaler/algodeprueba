@@ -66,7 +66,7 @@
                                <span class="caret"></span> Clasificados
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a href="" class="dropdown-item">Ofrecidos</a>
+                            <a href="/clasificados" class="dropdown-item">Ofrecidos</a>
                                 <a class="dropdown-item" href=""> Pedidos </a>
                             </div>
                         </li>
@@ -111,6 +111,7 @@
                 </div>
             </div>
         </nav>
+        
        
             @yield('content')
        

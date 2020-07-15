@@ -23,7 +23,7 @@
                                 @endif
 
                            
-                            Autor: <b><i>{{$user->name}} </i></b> . <span class="float-right"> {{date('d/m/Y - h:i',strtotime($comment->created_at))}}</span>
+                            Autor: <b><i>{{$user->name}} </i></b> . <span class="float-right"> {{date('d/m/Y - H:i ',strtotime($comment->created_at))}}</span>
                             @endif                            
                         @endforeach                    
                 </div>
@@ -71,6 +71,7 @@
         
     </div>
 
+<Likes></Likes>
 
 </div>
     
