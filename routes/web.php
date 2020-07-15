@@ -43,6 +43,8 @@ Route::get('/recursos', 'ResController@index');
 
 Route::resource('/clasificados', 'ClasificadosController');
 
+Route::resource('/desafios', 'DesafiosController');
+
 
 // ************ manager routes ************
 

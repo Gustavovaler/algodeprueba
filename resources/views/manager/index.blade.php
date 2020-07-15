@@ -5,7 +5,7 @@
 
     @if ($u->is_admin == 1 && $u->id == Auth::id())
 
-    is admin
+    {{count($user)}}
         
     @else
         forbidden {{Auth::id()}}

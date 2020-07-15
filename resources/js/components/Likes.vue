@@ -1,21 +1,26 @@
-<template>
-    
-         <span @click="add_like(6)" class="like">Me gusta</span>
-
-    
+<template>    
+         <span @click="add_like()" class="like">Me gusta <span class="badge badge-primary">{{commentlikes}}</span></span>    
 </template>
 
 <script>
 export default {
+      props:
+            ['commentid', 'commentlikes']
+        ,
 
     data(){
         return{
             datos: 6
         }
-    },
-    methods:{
-        add_like(id){
-            axios.put(`/comments/${id}`)
+    }, 
+     created(){
+           
+        },
+    methods:{     
+      
+        add_like(){
+            this.commentlikes ++;
+            axios.put(`/comments/${this.commentid}`)
             .then(res =>{})
         }
     }
@@ -32,6 +37,5 @@ export default {
     display: inline;
     cursor: pointer;
     color: darkcyan;
-}
-
+} 
 </style>

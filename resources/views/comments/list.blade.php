@@ -33,7 +33,7 @@
                 
                 </div>
                 <div class="card-footer">
-                   <span class="float-right"><Likes></Likes> <span class="badge badge-primary">{{$comment->likes}}</span></span>
+                   <span class="float-right"><Likes :commentid = {{$comment->id}} :commentlikes={{$comment->likes}}></Likes></span>
             </div>
         </div>
     </div>
