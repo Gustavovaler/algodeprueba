@@ -2,13 +2,20 @@
 <div>
         <div class="child_response">
             <form action="" class="formulario" v-on:submit.prevent>
-                <input type="text" class="form-control float-right" v-model="rta">
+                <input type="text" class="form-control float-right" v-model="rta" required @keyup.enter="enviarRespuesta">
                 <span class="btn btn-outline-primary float-right" @click="enviarRespuesta" >Responder</span>
             </form>
         </div> <br>
         <div class="respuestas">
             <div class="card mt-2" v-for="(resp, index) in resplist" :key="index">
-                {{resp.comment_text}}
+                <div class="card-header">
+                     {{resp.user_id}}{{resp.created_at}}
+                </div>
+                <div class="card-body">
+                    {{resp.comment_text}} 
+                </div>
+                             
+                
             </div>
         </div>
 
@@ -32,10 +39,7 @@ export default {
     },
 
     created(){
-        console.log(this.commentid);
         this.cargarRespuestas();
-        // this.enviarRespuesta();
-    
 
 
     },
@@ -48,6 +52,9 @@ export default {
         enviarRespuesta(){
             if (this.userid == 0) {
                 this.rta = "Debes loguear para poder comentar. "
+                return
+            }
+            if (this.rta == "") {
                 return
             }
             const data = {comment_text:this.rta, user_id:this.userid,parent_id:this.commentid}
@@ -66,6 +73,7 @@ export default {
 
 .respuestas{
     clear: both;
+    padding-top: 20px;
 }
 
 .formulario{    
@@ -78,6 +86,17 @@ input{
 
 span{
     border-radius: 5px 0px 0px 5px;
+}
+.card-header{
+    padding: 0;
+    padding-left: 15px;
+}
+.card{
+    width: 75%;
+    margin-left: 10%;
+}
+.card-body{
+    padding: .8em;
 }
 
 </style>

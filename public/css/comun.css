@@ -18,6 +18,15 @@
     margin: auto;
     margin-top: 15px;
 }
+.sh{
+
+    -webkit-box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.62);
+    -moz-box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.62);
+    box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.62);
+    border-radius: 4px;
+    
+
+}
 
 
 /*   list.commnets ******************************************/
@@ -26,7 +35,13 @@
     width: 90%;
 
 }
-
+.msg{
+    padding: 15px;
+    font-size: 1.25em;
+}
+.card-header{
+    background-color: rgb(233, 242, 251);
+}
 
 @media (max-widht:750px){
     .comment{

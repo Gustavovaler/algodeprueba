@@ -10,7 +10,7 @@
     @foreach ($comments as $comment)
     <div class="comment mt-2">
         <div class="col ">
-            <div class="card ">
+            <div class="card sh">
                 <div class="card-header">
 
                         @foreach ($users as $user)
@@ -27,9 +27,9 @@
                             @endif                            
                         @endforeach                    
                 </div>
-                <div class="card-body">
+                <div class="card-body msg">
                 
-                <p class="card-text">{{$comment->comment_text}}</p>
+                <p class="card-text ">{{$comment->comment_text}}</p>
                 
                 </div>
                 <div class="card-footer">

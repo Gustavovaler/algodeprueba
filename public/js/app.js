@@ -1991,6 +1991,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "respmensaje",
   props: ['commentid', 'userid'],
@@ -2002,8 +2009,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
-    console.log(this.commentid);
-    this.cargarRespuestas(); // this.enviarRespuesta();
+    this.cargarRespuestas();
   },
   methods: {
     cargarRespuestas: function cargarRespuestas() {
@@ -2016,6 +2022,10 @@ __webpack_require__.r(__webpack_exports__);
     enviarRespuesta: function enviarRespuesta() {
       if (this.userid == 0) {
         this.rta = "Debes loguear para poder comentar. ";
+        return;
+      }
+
+      if (this.rta == "") {
         return;
       }
 
@@ -6494,7 +6504,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.respuestas[data-v-6dce03ff]{\r\n    clear: both;\n}\n.formulario[data-v-6dce03ff]{    \r\n    display: inline;\n}\ninput[data-v-6dce03ff]{\r\n    width: 75%;\r\n    border-radius: 0px 5px 5px 0px;\n}\nspan[data-v-6dce03ff]{\r\n    border-radius: 5px 0px 0px 5px;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.respuestas[data-v-6dce03ff]{\r\n    clear: both;\r\n    padding-top: 20px;\n}\n.formulario[data-v-6dce03ff]{    \r\n    display: inline;\n}\ninput[data-v-6dce03ff]{\r\n    width: 75%;\r\n    border-radius: 0px 5px 5px 0px;\n}\nspan[data-v-6dce03ff]{\r\n    border-radius: 5px 0px 0px 5px;\n}\n.card-header[data-v-6dce03ff]{\r\n    padding: 0;\r\n    padding-left: 15px;\n}\n.card[data-v-6dce03ff]{\r\n    width: 75%;\r\n    margin-left: 10%;\n}\n.card-body[data-v-6dce03ff]{\r\n    padding: .8em;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -38430,9 +38440,18 @@ var render = function() {
               }
             ],
             staticClass: "form-control float-right",
-            attrs: { type: "text" },
+            attrs: { type: "text", required: "" },
             domProps: { value: _vm.rta },
             on: {
+              keyup: function($event) {
+                if (
+                  !$event.type.indexOf("key") &&
+                  _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                ) {
+                  return null
+                }
+                return _vm.enviarRespuesta($event)
+              },
               input: function($event) {
                 if ($event.target.composing) {
                   return
@@ -38461,11 +38480,22 @@ var render = function() {
       { staticClass: "respuestas" },
       _vm._l(_vm.resplist, function(resp, index) {
         return _c("div", { key: index, staticClass: "card mt-2" }, [
-          _vm._v(
-            "\r\n                " +
-              _vm._s(resp.comment_text) +
-              "\r\n            "
-          )
+          _c("div", { staticClass: "card-header" }, [
+            _vm._v(
+              "\r\n                     " +
+                _vm._s(resp.user_id) +
+                _vm._s(resp.created_at) +
+                "\r\n                "
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _vm._v(
+              "\r\n                    " +
+                _vm._s(resp.comment_text) +
+                " \r\n                "
+            )
+          ])
         ])
       }),
       0
