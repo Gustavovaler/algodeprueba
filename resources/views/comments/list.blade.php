@@ -73,12 +73,7 @@
             </form>
             <a href="/login" class="btn btn-primary float-right">Comentar</a>       
         @endif
-
-        
     </div>
-
-
-
 </div>
     
 @endsection
