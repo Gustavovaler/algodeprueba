@@ -16,7 +16,7 @@
 
                     Conoce quienes estamos anotados <a href="/developers">aquí</a><br>
                     Dejanos una sugerencia o un saludito en  <a href="/comments">Mensajes</a> <br>
-                    Podes ver tu <a href="">perfil</a> y modificar tus datos.
+                    Podes ver tu <a href="/developers/{{Auth::user()->id}}/perfil">perfil</a> y modificar tus datos.
                 </div>
             </div>
         </div>

@@ -45,6 +45,9 @@ Route::resource('/clasificados', 'ClasificadosController');
 
 Route::resource('/desafios', 'DesafiosController');
 
+Route::get('/childcomments/{id}', 'ChildRespController@index');
+
+Route::post('/childcomments/{id}', 'ChildRespController@store');
 
 // ************ manager routes ************
 

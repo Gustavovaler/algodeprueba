@@ -33,7 +33,14 @@
                 
                 </div>
                 <div class="card-footer">
-                   <span class="float-right"><Likes :commentid = {{$comment->id}} :commentlikes={{$comment->likes}}></Likes></span>
+                  <span class="float-right m-1"><Likes :commentid = {{$comment->id}} :commentlikes={{$comment->likes}}></Likes></span><br>
+                  @if (isset(Auth::user()->id))
+                      <respmensaje :commentid = {{$comment->id}}  :userid = {{Auth::user()->id}}></respmensaje>
+                  @else                 
+                  <respmensaje :commentid = {{$comment->id}}  :userid = 0></respmensaje>
+                  @endif
+                  
+                    
             </div>
         </div>
     </div>

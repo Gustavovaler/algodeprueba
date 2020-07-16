@@ -13,7 +13,7 @@ class DesafiosController extends Controller
      */
     public function index()
     {
-        //
+        return view('desafios.index');
     }
 
     /**
@@ -34,7 +34,7 @@ class DesafiosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return view('desafios.index');
     }
 
     /**
@@ -45,7 +45,7 @@ class DesafiosController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('desafios.show');
     }
 
     /**

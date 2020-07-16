@@ -61,6 +61,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="/recursos">Recursos</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/desafios">Desafios</a>
+                        </li>
                         <li class="nav-item dropdown">
                         <a id="clasificadosdropdown" class="nav-link dropdown-toggle active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                <span class="caret"></span> Clasificados
