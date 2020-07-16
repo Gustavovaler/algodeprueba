@@ -52,7 +52,9 @@ php artisan serve
 
 
 
-## Code of Conduct
+## Como colaborar
+
+Si creas un layout en html y css hacer una carpeta con tu nombre y archivos dentro de  la carpeta Colaboraciones  y hacer el Pull Request
 
 
 
