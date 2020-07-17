@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\ChildComment;
+use App\User;
 use Illuminate\Http\Request;
 
-class ChildResPController extends Controller
+class ChildRespController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +17,13 @@ class ChildResPController extends Controller
     {   
         
         $child_list = ChildComment::where('parent_id', $id)->get();
+        foreach ($child_list as $reg) {
+            $user = User::where('id', $reg->user_id)->get();
+            $reg->user_id = $user[0]->name;   
+        }  
+       
         return response()->json($child_list);        
+    
     }
 
     /**

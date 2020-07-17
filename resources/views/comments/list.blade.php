@@ -51,17 +51,21 @@
     <div class="agregar_comentario mt-5">
 
         @if (isset(Auth::user()->id))
+        {{ $comments->links() }}
+        <br>
             <form action="/comments" method="POST">
             @csrf
                 <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-                <div class="form-group">
+                <div class="form-group ml-5">
                     
                     <textarea class="form-control"  name="comment_text" id="exampleFormControlTextarea1" rows="3"  placeholder="Deja tu comentario.." required></textarea>
                 </div>
                 
                 <hr>
-                <input type="submit" value="Comentar" class="btn btn-primary">
+           
+                <input type="submit" value="Comentar" class="btn btn-primary ml-5">
             </form>
+            <br><br><br><br> 
         @else
             <form action="/comments" method="POST">
             @csrf
@@ -71,7 +75,11 @@
             </div>
                 <hr>                
             </form>
-            <a href="/login" class="btn btn-primary float-right">Comentar</a>       
+            <br>
+            {{ $comments->links() }}
+            <br>
+            <a href="/login" class="btn btn-primary float-right mb-5">Comentar</a>  
+            <br><br><br><br>     
         @endif
     </div>
 </div>

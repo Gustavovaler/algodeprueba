@@ -23,11 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/developers', 'UserController@index');
 
-Route::get('/developers/{id}', 'UserController@show')->middleware('auth');
-
 Route::post('/developers/{id}','UserController@store_perfil')->middleware('auth');
-
-Route::get('/developers/{id}/perfil', 'UserController@self_show')->middleware('auth');
 
 Route::get('/info', 'InfoController@index');
 
@@ -49,9 +45,11 @@ Route::get('/childcomments/{id}', 'ChildRespController@index');
 
 Route::post('/childcomments/{id}', 'ChildRespController@store');
 
+Route::get('/perfil', 'UserController@show')->middleware('auth');
+
 // ************ manager routes ************
 
-Route::get('/manager/{id}', 'ManagerController@index')->middleware('auth');
+Route::get('/manager', 'ManagerController@index')->middleware('auth');
 
 
 

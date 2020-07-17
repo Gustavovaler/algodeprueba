@@ -94,7 +94,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a href="/developers/{{Auth::id()}}/perfil" class="dropdown-item">Mi perfil</a>
+                                <a href="/perfil" class="dropdown-item">Mi perfil</a>
                                      <hr>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

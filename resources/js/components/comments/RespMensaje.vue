@@ -9,7 +9,7 @@
         <div class="respuestas">
             <div class="card mt-2" v-for="(resp, index) in resplist" :key="index">
                 <div class="card-header">
-                     {{resp.user_id}}{{resp.created_at}}
+                     <b><i>{{resp.user_id}}</i></b><span class="float-right mr-3"> {{resp.created_at.substring(0,10)}}</span>
                 </div>
                 <div class="card-body">
                     {{resp.comment_text}} 
@@ -33,7 +33,8 @@ export default {
 
             resplist : [],
             entrada:"",
-            rta:""
+            rta:"",
+           
     
         }
     },
@@ -45,8 +46,11 @@ export default {
     },
     methods:{
         cargarRespuestas(){
-            const respuestas = axios.get(`/childcomments/${this.commentid}`)
+            axios.get(`/childcomments/${this.commentid}`)
+            
       .then(response => {this.resplist = response.data})
+      
+     
         },
 
         enviarRespuesta(){
@@ -60,6 +64,7 @@ export default {
             const data = {comment_text:this.rta, user_id:this.userid,parent_id:this.commentid}
             axios.post(`/childcomments/${this.commentid}`, data)
             .then(response => {})
+            
             this.rta = "";
             this.cargarRespuestas();
         }        

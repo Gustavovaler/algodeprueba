@@ -17,23 +17,19 @@ class UserController extends Controller
         return view('users.list',compact('users'));
     }
 
-    public function show(Request $request, $id)
+    public function show(Request $request)
     {
-        return $id;
-    }
-
-    public function self_show(Request $request, $id)
-    {
-        if (Auth::id() == $id ) {
-
-            $user_data = User::where('id',$id)->get();
-            $perfil_data = Perfil::where('user_id', $id);
+        if (null !== Auth::id()){
+            $user_data = User::where('id',Auth::id())->get();
+            $perfil_data = Perfil::where('user_id',Auth::id());
             
             return view('users.detail', compact('user_data', 'perfil_data'));
         }
-        return "false";
-       
+
+        return view('auth.login');
     }
+
+
     public function store_perfil(Request $request, $id)
     {
         return view('home');

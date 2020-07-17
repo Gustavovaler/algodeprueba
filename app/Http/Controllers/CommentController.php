@@ -11,7 +11,7 @@ class CommentController extends Controller
 {
     public function index(Request $request)
     {
-        $comments = DB::table('comments')->orderBy('created_at', 'desc')->get();
+        $comments = DB::table('comments')->orderBy('created_at', 'desc')->simplePaginate(10);
         $users = User::all();
 
         return view('comments.list', compact('comments', 'users'));
@@ -25,7 +25,7 @@ class CommentController extends Controller
         $comment->comment_text = $request->input('comment_text');
         $comment->user_id = $request->input('user_id');
         $comment->save();
-        $comments = DB::table('comments')->orderBy('created_at', 'desc')->get();
+        $comments = DB::table('comments')->orderBy('created_at', 'asc')->simplePaginate(10);
         $users = User::all();
         
         return view('comments.list', compact('comments', 'users'));
