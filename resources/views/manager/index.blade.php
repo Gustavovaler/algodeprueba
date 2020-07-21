@@ -2,6 +2,7 @@
 
 @section('content')   
     <link rel="stylesheet" href="{{asset('css/manager.css')}}">    
+    <script src="{{asset('js/mail.js')}}"></script>
 
     <div class="container">
 
@@ -46,10 +47,27 @@
         </table>
         </div>
         <div class="col-md-6">
-
+            <form action="/manager/send_mail" method="POST" id="form-mail">
+                @csrf
+            <select name="usuario" id="usuario" class="custom-select custom-select-lg mb-3">
+                @foreach ($users as $u)
+                    <option value="{{$u->email}}" >{{$u->name}}- id: {{$u->id}}</option>
+                @endforeach 
+            </select>
+            <input class="btn btn-success" onclick="comfirm(event)" value="Enviar mail" >
+        </form>
         </div>
 
     </div>
+    {{-- --------------------------------------------------------------------------- --}}
+
+    <div class="row">
+        <div class="col-md-6">
+          
+        </div>
+    </div>
+
+
     </div>
 
   
