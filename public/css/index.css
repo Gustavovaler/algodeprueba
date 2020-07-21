@@ -1,0 +1,115 @@
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+.title-header{
+	/*font-family:'Spinnaker', sans-serif;*/
+	font-family: 'Signika', sans-serif;
+	font-size: 4em;
+	color: #253858;
+	font-weight: 500;
+}
+.title-header2{
+	font-family:'Spinnaker', sans-serif;
+	font-size: 2.2em;
+	color: #253858;
+	font-weight: 700;	
+}
+
+.copete{
+	font-family:'Spinnaker', sans-serif;
+	font-size: 1.25em;
+	color: #253858;
+}
+
+.comanda{
+	font-family:'Spinnaker', sans-serif;
+	font-size: 1.1em;
+	color: #253858;
+	margin-top: 20px;
+}
+
+.img-central{
+	max-width: 100%;
+}
+
+.img-central img{
+	width: 100%;
+}
+
+.img-card{
+	width: 85%;
+}
+.a{
+	width: 45%;
+}
+.b{
+	width: 65%;
+}
+.c{
+	width: 54%;
+}
+
+.info-p{
+	font-family:'Spinnaker', sans-serif;
+	font-size: 1.1em;
+	color: #253858;
+}
+.olas{
+	opacity: 0.4;
+	width: 100%;
+	margin-bottom: 25px;
+}
+.bg-gray{
+	background-color: #f6f6f6;
+	padding-top:20px;
+
+}
+.section2-left img{ 
+	width: 100%;
+ }
+
+.sub-title-right{
+	font-family:'Spinnaker', sans-serif;
+	color: #253858;
+	padding: 8px 8px 8px 5px;
+	font-size: .8rem;
+}
+
+.title-right{
+	font-family:'Spinnaker', sans-serif;
+	color: #253858;
+	padding: 8px 8px 8px 5px;
+	font-size: 2.2rem;
+	font-weight: 700;
+}
+
+.title-image{
+	font-family:'Spinnaker', sans-serif;
+	color: #253858;
+	padding: 8px 8px 8px 5px;
+	font-size: 1.4rem;
+	font-weight: 700;
+	margin-top: 10px;
+	margin-bottom:10px;
+}
+.imagen-icon{
+	min-height: 110px;
+}
+
+.icon{
+	width: 80px;
+	align-self: left;
+}
+
+.sh-small{
+	-webkit-box-shadow: 3px 1px 5px -1px rgba(0,0,0,0.5);
+	-moz-box-shadow: 3px 1px 5px -1px rgba(0,0,0,0.5);
+	box-shadow: 3px 1px 5px -1px rgba(0,0,0,0.5);
+
+}
+.bit{
+	width: 80px;
+}
