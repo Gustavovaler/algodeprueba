@@ -55,7 +55,15 @@ class ManagerController extends Controller
     public function mails(Request $request)
     {
         $users = User::all();
-        //Mail::to($user_mail)->send(new WelcomeMail());
+        
         return view('manager.mails', compact('users'));
+    }
+
+    public function send_mail(Request $request)
+    {
+        $user_mail = $request->input('usuario');
+        Mail::to($user_mail)->send(new WelcomeMail());
+        return redirect('/manager');
+
     }
 }

@@ -2,7 +2,7 @@
 
 @section('content')   
     <link rel="stylesheet" href="{{asset('css/manager.css')}}">    
-    {{-- <script src="{{asset('js/mail.js')}}"></script> --}}
+    
 
     <div class="container">
 

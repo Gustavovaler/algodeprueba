@@ -30,6 +30,6 @@ class WelcomeMail extends Mailable
     {
 
         return $this->from('admin@algodeprueba.tk')
-                    ->view('info');
+                    ->view('mails.system.welcome');
     }
 }
