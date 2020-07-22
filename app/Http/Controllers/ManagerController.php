@@ -43,8 +43,7 @@ class ManagerController extends Controller
             $otros= count($users)-$mas20-$mas25-$mas30;
             $edades = [$mas20, $mas25, $mas30, $otros];
             $generos = [$mujeres, $varones, $otro];
-
-
+           
            return view('manager.index', compact('user', 'users', 'comments', 'child_comments','desafios', 'generos', 'edades'));
         }
         return "forbidden";
@@ -63,6 +62,7 @@ class ManagerController extends Controller
     {
         $user_mail = $request->input('usuario');
         Mail::to($user_mail)->send(new WelcomeMail());
+
         return redirect('/manager');
 
     }
