@@ -22,20 +22,40 @@ class ManagerController extends Controller
             $users = User::all();
             $comments = comments::all();
             $child_comments = ChildComment::all();
-            $desafios = Desafio::all();
+            $desafios = Desafio::all();            
+            $mujeres = count(User::where('genero', 'Femenino')->get());
+            $varones = count(User::where('genero', 'Masculino')->get());
+            $otro = count(User::where('genero', 'Otro')->get());
+            $mas20=0;
+            $mas25 = 0;
+            $mas30=0;         
+            foreach ($users as $u) {
+                if ($u->edad >= 30 && $u->edad <= 40) {
+                    $mas30 ++;
+                }
+                if ($u->edad >= 25 && $u->edad <30) {
+                    $mas25 ++;
+                }
+               if ($u->edad < 25 && $u->edad >= 20) {
+                   $mas20 ++;
+               }
+            }
+            $otros= count($users)-$mas20-$mas25-$mas30;
+            $edades = [$mas20, $mas25, $mas30, $otros];
+            $generos = [$mujeres, $varones, $otro];
 
 
-           return view('manager.index', compact('user', 'users', 'comments', 'child_comments','desafios'));
+           return view('manager.index', compact('user', 'users', 'comments', 'child_comments','desafios', 'generos', 'edades'));
         }
         return "forbidden";
     
        
     }
 
-    public function send_mail(Request $request)
+    public function mails(Request $request)
     {
-        $user_mail = $request->input('usuario');
+        $users = User::all();
         //Mail::to($user_mail)->send(new WelcomeMail());
-        return redirect('/manager');
+        return view('manager.mails', compact('users'));
     }
 }

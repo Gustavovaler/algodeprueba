@@ -2,7 +2,7 @@
 
 @section('content')   
     <link rel="stylesheet" href="{{asset('css/manager.css')}}">    
-    <script src="{{asset('js/mail.js')}}"></script>
+    {{-- <script src="{{asset('js/mail.js')}}"></script> --}}
 
     <div class="container">
 
@@ -11,6 +11,7 @@
         <hr>
     <div class="row">
         <div class="col-md-6 totales">
+            <h3 class="title">Stats</h3>
         <table class="table table-borderer">
             <tr>
                 <td>
@@ -44,28 +45,64 @@
                     {{count($desafios)}}
                 </td>
             </tr>
+            
         </table>
         </div>
         <div class="col-md-6">
-            <form action="/manager/send_mail" method="POST" id="form-mail">
-                @csrf
-            <select name="usuario" id="usuario" class="custom-select custom-select-lg mb-3">
-                @foreach ($users as $u)
-                    <option value="{{$u->email}}" >{{$u->name}}- id: {{$u->id}}</option>
-                @endforeach 
-            </select>
-            <input class="btn btn-success" onclick="comfirm(event)" value="Enviar mail" >
-        </form>
+            <h3 class="title">Panel de acciones.</h3>          
+            <a  class="btn btn-success btn-block" href="/manager/mails" >Enviar mails </a>
+            <a  class="btn btn-primary btn-block" href="/manager/mails" >Nuevo recurso </a>
+            <a  class="btn btn-success btn-block" href="/manager/mails" >Nuevo desafío</a>
+            <a  class="btn btn-success btn-block" href="/manager/mails" >Casillas correo</a>
         </div>
 
     </div>
+    <hr>
     {{-- --------------------------------------------------------------------------- --}}
 
     <div class="row">
         <div class="col-md-6">
-          
+            <h4 class="title">Usurios según género:</h4>
+
+            <table>
+                <tr>
+                    <td><h5>Usuarios Varones:</h5></td> 
+                    <td><h5>{{$generos[1]}}</h5></td>
+                </tr>
+                <tr>
+                    <td><h5>Usuarios Mujeres:</h5></td> 
+                    <td><h5>{{$generos[0]}}</h5></td>
+                </tr>
+                <tr>
+                    <td><h5>Usuarios Otro:</h5></td> 
+                    <td><h5>{{$generos[2]}}</h5></td>
+                </tr>
+              
+            </table>
+            <br><hr>
+            <h4 class="title">Usurios según edad:</h4>
+
+            <table>
+                <tr>
+                    <td><h5>Usuarios +20  y -25:</h5></td> 
+                    <td><h5>{{$edades[0]}}</h5></td>
+                </tr>
+                <tr>
+                    <td><h5>Usuarios +25 y -30:</h5></td> 
+                    <td><h5>{{$edades[1]}}</h5></td>
+                </tr>
+                <tr>
+                    <td><h5>Usuarios +30 y -40:</h5></td> 
+                    <td><h5>{{$edades[2]}}</h5></td>
+                </tr>
+                <tr>
+                    <td><h5>Usuarios otras edades:</h5></td> 
+                    <td><h5>{{$edades[3]}}</h5></td>
+                </tr>              
+            </table>          
         </div>
     </div>
+    
 
 
     </div>

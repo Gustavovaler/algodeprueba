@@ -50,7 +50,7 @@ Route::get('/perfil', 'UserController@show')->middleware('auth');
 // ************ manager routes ************
 
 Route::get('/manager', 'ManagerController@index')->middleware('auth');
-Route::post('/manager/send_mail', 'ManagerController@send_mail');
+Route::get('/manager/mails', 'ManagerController@mails')->middleware('auth');
 
 
 

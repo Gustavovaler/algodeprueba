@@ -1,6 +1,4 @@
 
-
-
 function comfirm(e){
     const send_mail = document.getElementById('form-mail');
     e.preventDefault();
