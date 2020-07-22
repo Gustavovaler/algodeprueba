@@ -21,7 +21,7 @@ class UserController extends Controller
     {
         if (null !== Auth::id()){
             $user_data = User::where('id',Auth::id())->get();
-            $perfil_data = Perfil::where('user_id',Auth::id());
+            $perfil_data = Perfil::where('user_id',Auth::id())->get();
             
             return view('users.detail', compact('user_data', 'perfil_data'));
         }

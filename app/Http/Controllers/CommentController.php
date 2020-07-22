@@ -24,11 +24,8 @@ class CommentController extends Controller
         $comment = new comments();
         $comment->comment_text = $request->input('comment_text');
         $comment->user_id = $request->input('user_id');
-        $comment->save();
-        $comments = DB::table('comments')->orderBy('created_at', 'asc')->simplePaginate(10);
-        $users = User::all();
-        
-        return view('comments.list', compact('comments', 'users'));
+        $comment->save();        
+        return redirect('/comments');
     }
 
     public function update_like(Request $request, $id)

@@ -6,7 +6,9 @@
 
 
 <div class="container mt-4">
-
+  
+    {{ $comments->links() }}
+  
     @foreach ($comments as $comment)
     <div class="comment mt-2">
         <div class="col ">
@@ -49,9 +51,9 @@
     @endforeach
 
     <div class="agregar_comentario mt-5">
-
+    {{ $comments->links() }}
         @if (isset(Auth::user()->id))
-        {{ $comments->links() }}
+        
         <br>
             <form action="/comments" method="POST">
             @csrf
@@ -66,7 +68,7 @@
                 <input type="submit" value="Comentar" class="btn btn-primary ml-5">
             </form>
             <br><br><br><br> 
-        @else
+        @else 
             <form action="/comments" method="POST">
             @csrf
             <div class="form-group">
@@ -76,7 +78,7 @@
                 <hr>                
             </form>
             <br>
-            {{ $comments->links() }}
+           
             <br>
             <a href="/login" class="btn btn-primary float-right mb-5">Comentar</a>  
             <br><br><br><br>     
