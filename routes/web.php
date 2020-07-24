@@ -53,8 +53,19 @@ Route::get('/manager', 'ManagerController@index')->middleware('auth');
 Route::get('/manager/mails', 'ManagerController@mails')->middleware('auth');
 Route::post('/manager/send_mail', 'ManagerController@send_mail')->middleware('auth');
 
+
+// ******   DONACIONES  ******
 Route::get('/donate', function(){
     return view('donate.donar');
+});
+Route::get('//pago-aprobado', function(){
+    return view('donate.aprobado');
+});
+Route::get('/pago-rechazado', function(){
+    return view('donate.rechazado');
+});
+Route::get('/pago-pendiente', function(){
+    return view('donate.pendiente');
 });
 
 
