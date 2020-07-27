@@ -15,10 +15,13 @@ class WelcomeMail extends Mailable
      * Create a new message instance.
      *
      * @return void
+     * 
      */
-    public function __construct()
+    public $user;
+
+    public function __construct($user)
     {
-        //
+        $this->user= $user;
     }
 
     /**
@@ -30,6 +33,7 @@ class WelcomeMail extends Mailable
     {
 
         return $this->from('admin@algodeprueba.tk')
-                    ->view('mails.system.welcome');
+                    ->view('mails.system.welcome')
+                    ->with('user_id' ,$this->user);
     }
 }

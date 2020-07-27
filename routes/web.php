@@ -23,6 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/developers', 'UserController@index');
 
+Route::get('/developers/{id}/{email}', 'UserController@verify_mail');
+
 Route::post('/developers/{id}','UserController@store_perfil')->middleware('auth');
 
 Route::get('/info', 'InfoController@index');
@@ -58,7 +60,7 @@ Route::post('/manager/send_mail', 'ManagerController@send_mail')->middleware('au
 Route::get('/donate', function(){
     return view('donate.donar');
 });
-Route::get('//pago-aprobado', function(){
+Route::get('/pago-aprobado', function(){
     return view('donate.aprobado');
 });
 Route::get('/pago-rechazado', function(){

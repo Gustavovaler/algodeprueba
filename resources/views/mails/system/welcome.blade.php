@@ -25,7 +25,9 @@
         <tr>
             <td>
                 <div class="panel" style="background-color: #fff; width: 80%;padding: 10px; margin: auto; border-radius: 3px;">
-                    <p><a href="https://algodeprueba.tk" style="text-decoration: none;font-size: 1.3em;color: midnightblue;">Sigue este enlace para confirmar tu cuenta.</a></p>
+
+                    <form action=""></form>
+                    <p><a href="https://algodeprueba.tk/developers/{{$user_id[0]->id}}/{{$user_id[0]->email}}" style="text-decoration: none;font-size: 1.3em;color: midnightblue;">Sigue este enlace para confirmar tu cuenta.</a></p>
                 </div>
             </td>
         </tr>
@@ -38,5 +40,6 @@
             </td>
         </tr>
     </table> 
+    
 </body>
 </html>

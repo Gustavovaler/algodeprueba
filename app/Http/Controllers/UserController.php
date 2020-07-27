@@ -35,4 +35,24 @@ class UserController extends Controller
         return view('home');
     }
 
+    public function verify_mail(Request $request, $id, $email)
+    {
+        $user = User::where('id', $id)->get();
+
+        if ($user[0]->id == $id && $user[0]->email == $email) {
+           $user[0]->email_verified_at = time();
+           $user[0]->save();
+           return redirect('/welcome');;
+        }
+        else{
+            return redirect('/error');
+        }
+     
+        
+        
+
+        
+        
+    }
+
 }

@@ -61,7 +61,8 @@ class ManagerController extends Controller
     public function send_mail(Request $request)
     {
         $user_mail = $request->input('usuario');
-        Mail::to($user_mail)->send(new WelcomeMail());
+        $user_id = User::where('email', $user_mail)->get();
+        Mail::to($user_mail)->send(new WelcomeMail($user_id));
 
         return redirect('/manager');
 
