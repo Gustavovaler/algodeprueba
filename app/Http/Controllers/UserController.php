@@ -42,14 +42,11 @@ class UserController extends Controller
         if ($user[0]->id == $id && $user[0]->email == $email) {
            $user[0]->email_verified_at = time();
            $user[0]->save();
-           return redirect('/welcome');;
+           return redirect('/');;
         }
         else{
             return redirect('/error');
-        }
-     
-        
-        
+        }    
 
         
         

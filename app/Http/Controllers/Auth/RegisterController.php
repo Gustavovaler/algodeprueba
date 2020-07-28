@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Mail\WelcomeMail;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Mail;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -67,7 +69,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'edad' => $data['edad'],
@@ -76,5 +78,12 @@ class RegisterController extends Controller
             'pais' => $data['pais'],
             'password' => Hash::make($data['password']),
         ]);
+        $user_id = User::where('email', $user->email)->get();
+        $this->send_verification_mail($user_id, $user);
+        return $user;
+    }
+    protected function send_verification_mail($user_id, $user)
+    {
+        Mail::to($user->email)->send(new WelcomeMail($user_id));
     }
 }
