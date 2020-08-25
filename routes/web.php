@@ -19,6 +19,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('/conf', function(){
+    return redirect()->route('login');
+});
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/developers', 'UserController@index');

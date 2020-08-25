@@ -34,7 +34,9 @@ class ClasificadosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $requested = $request;
+        return response('Hola', 200);
     }
 
     /**
