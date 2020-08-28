@@ -19,9 +19,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::post('/conf', function(){
-    return redirect()->route('login');
-});
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/developers', 'UserController@index');
@@ -73,5 +70,12 @@ Route::get('/pago-pendiente', function(){
     return view('donate.pendiente');
 });
 
+Route::post('/ipn', function(){
+    $vari = new stdClass();
+    $vari->topic = $_REQUEST['topic'];
+    $vari->id = $_REQUEST['id'];
+    $jsonvari = json_encode($vari);
+    return response($jsonvari,201);
+});
 
 
