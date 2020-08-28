@@ -1,12 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-4">
+<div class="container mt-3">
 
 
-    <h1>Quienes Somos Hasta Ahora !</h1>
+    <h1 class="display-6 ml-5">Quienes Somos Hasta Ahora !</h1>
     <br>
+<div class="row">
+  <div class="col-md-8 offset-1" >
 
+ 
  <table class="table">
         <thead>
           <tr>
@@ -31,6 +34,9 @@
         
         </tbody>
       </table>
+
+    </div>
+  </div>
 
       {{ $users->links() }}
 </div>    
