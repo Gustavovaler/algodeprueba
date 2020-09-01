@@ -52,7 +52,7 @@
             <h3 class="title">Panel de acciones.</h3>          
             <a  class="btn btn-success btn-block" href="/manager/mails" >Enviar mails </a>
             <a  class="btn btn-primary btn-block" href="/manager/mails" >Nuevo recurso </a>
-            <a  class="btn btn-success btn-block" href="/manager/mails" >Nuevo desafío</a>
+            <a  class="btn btn-primary btn-block" href="/manager/create_challenge" >Nuevo desafío</a>
             <a  class="btn btn-success btn-block" href="/manager/mails" >Casillas correo</a>
         </div>
 
@@ -100,6 +100,18 @@
                     <td><h5>{{$edades[3]}}</h5></td>
                 </tr>              
             </table>          
+        </div>
+        <div class="col-md-6">
+            <h4 class="title">Usuarios verificados:</h4>
+
+            <table>
+                <tr>
+                    <td><h5>Usuarios verificados:</h5></td> 
+                    <td><h5>{{$verificados}}</h5></td>
+                </tr>
+                
+              
+            </table>
         </div>
     </div>
     

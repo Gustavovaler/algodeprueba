@@ -26,6 +26,7 @@ class ManagerController extends Controller
             $mujeres = count(User::where('genero', 'Femenino')->get());
             $varones = count(User::where('genero', 'Masculino')->get());
             $otro = count(User::where('genero', 'Otro')->get());
+            $verificados = count($users) - count(User::where('email_verified_at', null)->get());
             $mas20=0;
             $mas25 = 0;
             $mas30=0;         
@@ -43,8 +44,9 @@ class ManagerController extends Controller
             $otros= count($users)-$mas20-$mas25-$mas30;
             $edades = [$mas20, $mas25, $mas30, $otros];
             $generos = [$mujeres, $varones, $otro];
+            
            
-           return view('manager.index', compact('user', 'users', 'comments', 'child_comments','desafios', 'generos', 'edades'));
+           return view('manager.index', compact('user', 'users', 'comments', 'child_comments','desafios', 'generos', 'edades', 'verificados'));
         }
         return "forbidden";
     
@@ -66,5 +68,9 @@ class ManagerController extends Controller
 
         return redirect('/manager');
 
+    }
+
+    public function create_challenge(){
+        return view('manager.desafios_create');
     }
 }

@@ -54,6 +54,7 @@ Route::get('/perfil', 'UserController@show')->middleware('auth');
 Route::get('/manager', 'ManagerController@index')->middleware('auth');
 Route::get('/manager/mails', 'ManagerController@mails')->middleware('auth');
 Route::post('/manager/send_mail', 'ManagerController@send_mail')->middleware('auth');
+Route::get('/manager/create_challenge', 'ManagerController@create_challenge')->middleware('auth');
 
 
 // ******   DONACIONES  ******
@@ -75,6 +76,7 @@ Route::post('/ipn', function(){
     $vari->topic = $_REQUEST['topic'];
     $vari->id = $_REQUEST['id'];
     $jsonvari = json_encode($vari);
+    file_put_contents("data.txt", $jsonvari);
     return response($jsonvari,201);
 });
 
