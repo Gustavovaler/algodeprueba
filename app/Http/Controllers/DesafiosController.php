@@ -25,7 +25,7 @@ class DesafiosController extends Controller
      */
     public function create()
     {
-        //
+        return view('desafios.create');
     }
 
     /**
@@ -36,7 +36,13 @@ class DesafiosController extends Controller
      */
     public function store(Request $request)
     {
-        return view('desafios.index');
+
+        $desafio = new Desafio();
+        $desafio->main_lang = $request->input('main_lang');
+        $desafio->body_text = $request->input('mytextarea');
+        $desafio->save();
+
+        return redirect('/desafios');
     }
 
     /**

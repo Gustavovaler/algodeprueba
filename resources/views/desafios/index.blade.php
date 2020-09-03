@@ -11,7 +11,7 @@
             <div class="card p-4">
                 <h4>{{$desafio->title}}</h4>
 
-                <p>{{$desafio->body_text}}
+                <p>{!! $desafio->body_text !!}
                 </p>
                 <h3>Requisitos</h3>
                 <ul>
@@ -82,16 +82,6 @@
     </div> {{-- row --}}
     
 
-    <script>
-    tinymce.init({
-        selector: '#mytextarea'});
-  
-        </script>
-        <form method="post">
-            <textarea id="mytextarea" name="mytextarea">
-              Hello, World!
-            </textarea>
-          </form>
 
 </div>{{-- container --}}
     
