@@ -11,6 +11,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://cdn.tiny.cloud/1/i686foxm5qcvrxu6fdxa4lwgy1mtsusozck547w8z65z4eaa/tinymce/5/tinymce.min.js"
+     referrerpolicy="origin"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -37,7 +39,7 @@
                     <!-- Left Side Of Navbar -->
                     
                       
-                    <ul class="navbar-nav  mr-auto">
+                    <ul class="navbar-nav bg-dark navbar-dark mr-auto">
                         <li class="nav-item">
                             <a class="nav-link active " href="/">
                                 {{-- <svg width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +56,7 @@
                             <a class="nav-link active" href="/info">Info</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/extras">Extras</a>
+                            <a class="nav-link active" href="/cursos">Cursos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="/comments">Voces</a>

@@ -29,8 +29,6 @@ Route::post('/developers/{id}','UserController@store_perfil')->middleware('auth'
 
 Route::get('/info', 'InfoController@index');
 
-Route::get('/extras', 'ExtrasController@index');
-
 Route::get('/comments', 'CommentController@index');
 
 Route::post('/comments', 'CommentController@store');
@@ -48,6 +46,8 @@ Route::get('/childcomments/{id}', 'ChildRespController@index');
 Route::post('/childcomments/{id}', 'ChildRespController@store');
 
 Route::get('/perfil', 'UserController@show')->middleware('auth');
+
+Route::resource('/cursos', 'CursosController');
 
 // ************ manager routes ************
 

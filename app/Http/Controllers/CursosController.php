@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-Use App\Desafio;
 
-class DesafiosController extends Controller
+class CursosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class DesafiosController extends Controller
      */
     public function index()
     {
-        $desafios = Desafio::all();
-        return view('desafios.index', compact('desafios'));
+        return view('cursos.index');
     }
 
     /**
@@ -36,7 +34,7 @@ class DesafiosController extends Controller
      */
     public function store(Request $request)
     {
-        return view('desafios.index');
+        //
     }
 
     /**
@@ -47,7 +45,7 @@ class DesafiosController extends Controller
      */
     public function show($id)
     {
-        return view('desafios.show');
+        //
     }
 
     /**
