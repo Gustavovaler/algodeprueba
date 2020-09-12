@@ -29,6 +29,13 @@
             <td>{{ ucfirst($user->name) }}</td>
             <td>{{ $user->edad }}</td>
             <td>{{ ucfirst($user->pais) }}</td>
+            @if (Auth::user() != null)
+                 @if (Auth::user()->is_admin == 1)
+                <td>{{ date($user->created_at)}}</td>
+                @endif
+            @endif
+           
+          
         </tr>
     @endforeach        
         
@@ -37,7 +44,7 @@
 
     </div>
   </div>
-
+  
       {{ $users->links() }}
 </div>    
 @endsection

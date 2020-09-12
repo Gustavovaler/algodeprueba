@@ -9,6 +9,7 @@
         <input type="number" name="importe_total" min="1">
         <input type="hidden" name="cantidad_items" value="1">
         <input type="hidden" name="titulo" value="Mi compra.">
+        <input type="hidden" name="compra_id" value="65gdfg9dfg5"><!--  valor para identificar la venta de forma unica -->
         <br><br>
         <input type="submit" class="btn btn-primary" id="boton" value="Pagar">
     </form>
