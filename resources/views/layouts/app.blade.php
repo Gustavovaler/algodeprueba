@@ -120,6 +120,16 @@
                 </div>
             </div>
         </nav>
+        @if (Auth::user() != null)
+            @if (Auth::user()->is_admin == true)
+              <div class="container">
+                <div class="alert alert-danger" role="alert">
+                    Estas logueado como administrador. User: <b>{{Auth::user()->name}}</b>
+                </div>
+            </div>  
+            @endif
+            
+        @endif
         
        
             @yield('content')

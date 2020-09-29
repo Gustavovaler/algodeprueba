@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+@extends('layouts.app')
+
+@section('content')
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error 404</title>
@@ -16,7 +17,7 @@
 
     <div class="container">
 
-        <h1>Error -- 404 Esta página no esxiste !!</h1> 
+        <h1>Lo sentimos, esta página no existe !!</h1> 
 
         <hr>
         <h3>Prueba las siguientes secciones</h3>
@@ -52,6 +53,8 @@
         
 
     </div>
+@endsection
+
     
     
 </body>

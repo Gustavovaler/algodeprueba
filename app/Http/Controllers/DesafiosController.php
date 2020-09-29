@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 Use App\Desafio;
 
@@ -25,7 +25,15 @@ class DesafiosController extends Controller
      */
     public function create()
     {
-        return view('desafios.create');
+        if (Auth::check()) {
+
+            if(Auth::user()->is_admin == true){
+                return view('desafios.create');
+            }  
+            return view('errors.error404');    
+        }
+        return redirect('login');
+        
     }
 
     /**
