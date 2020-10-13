@@ -1,0 +1,17 @@
+
+
+
+
+.banner-central{
+    background-color: rgb(207, 207, 207);
+    box-shadow: 1px 1px 1px gray;
+    height: 15rem;
+}
+
+
+.avatar{
+    background-color: peru;
+    position: absolute;
+    height: 12rem;
+    float: left;
+}

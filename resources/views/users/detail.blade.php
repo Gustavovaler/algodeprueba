@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-
+<link rel="stylesheet" href="{{asset('css/perfil.css')}}">
+{{-- 
     <div class="container mt-4">   
         <div class="row">
             <div class="col-md-3">
@@ -20,17 +21,29 @@
                     <input type="submit" class="btn btn-primary">
                 </form>
             </div>
-        </div>   
-            
-           
-
-           
-      
+        </div>
+       --}}
 
 
 
 
     </div>
+    <div class="container mt-2">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner-central">
+
+                </div>
+                <div class="avatar">
+                    
+                </div>
+            </div>
+
+        </div>
+            
+    </div>
+           
     
     
 @endsection
