@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/developers', 'UserController@index');
+// Route::get('/developers', 'UserController@index');
 
 Route::get('/developers/{id}/{email}', 'UserController@verify_mail');
 

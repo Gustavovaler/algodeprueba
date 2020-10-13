@@ -49,9 +49,9 @@
                                   Home
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link active alinker" href="/developers">Developers</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a class="nav-link active" href="/info">Info</a>
                         </li>
@@ -59,7 +59,7 @@
                             <a class="nav-link active" href="/cursos">Cursos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/comments">Voces</a>
+                            <a class="nav-link active" href="/comments">Comunidad</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="/recursos">Recursos</a>
