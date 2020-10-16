@@ -6,9 +6,16 @@
 
     <div class="container">
 
-    <div class="alert alert-primary mt-2" >Estas logeado como : {{$user[0]->name}}</div>
+    
     <h1 class="title">Dashboard</h1>
         <hr>
+
+    <div class="row-mt-2">
+        <div class="col-md-12 totales">
+            <h3>Cursos</h3>
+        </div>
+    </div>
+    <hr>
     <div class="row">
         <div class="col-md-6 totales">
             <h3 class="title">Stats</h3>
