@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\User;
+use App\Curso;
+
 
 class CursosController extends Controller
 {
@@ -13,7 +17,8 @@ class CursosController extends Controller
      */
     public function index()
     {
-        return view('cursos.index');
+        $cursos = Curso::all();
+        return view('cursos.index', compact('cursos'));
     }
 
     /**
@@ -23,7 +28,19 @@ class CursosController extends Controller
      */
     public function create()
     {
-        //
+
+        if (Auth::id() != null) {
+           
+        
+        $user = User::where('id',Auth::id())->get();
+        if ($user[0]->is_admin == 1) {
+            return view('cursos.create');
+        }
+    }
+        return "forbidden";
+
+
+        
     }
 
     /**
@@ -34,7 +51,11 @@ class CursosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $curso = new Curso();
+        $curso->titulo = $request->input('titulo');
+        $curso->created_by = Auth::id();
+        $curso->save();
+        return redirect('/');
     }
 
     /**

@@ -16,6 +16,7 @@ class ManagerController extends Controller
 {
     public function index(Request $request)
     {
+        
         $user = User::where('id',Auth::id())->get();
         if ($user[0]->is_admin == 1) {
 
