@@ -52,9 +52,9 @@
                         {{-- <li class="nav-item">
                             <a class="nav-link active alinker" href="/developers">Developers</a>
                         </li> --}}
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link active" href="/info">Info</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a class="nav-link active" href="/cursos">Cursos</a>
                         </li>

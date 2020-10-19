@@ -53,6 +53,9 @@ class CursosController extends Controller
     {
         $curso = new Curso();
         $curso->titulo = $request->input('titulo');
+        $curso->descripcion = $request->input('descripcion');
+        $curso->precio = $request->input('precio');
+        $curso->fecha_estreno = $request->input('fecha_estreno');
         $curso->created_by = Auth::id();
         $curso->save();
         return redirect('/');
