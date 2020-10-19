@@ -57,6 +57,10 @@ class CursosController extends Controller
         $curso->precio = $request->input('precio');
         $curso->fecha_estreno = $request->input('fecha_estreno');
         $curso->created_by = Auth::id();
+        $imagen = $request->file('imagen');
+        $nombre_imagen = time().$imagen->getClientOriginalName();
+        $path  = $imagen->storeAs('public/img', $nombre_imagen);        
+        $curso->imagen = 'img/'.$nombre_imagen;
         $curso->save();
         return redirect('/');
     }

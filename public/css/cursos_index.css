@@ -1,5 +1,9 @@
 
 
-#info{
+.info{
     float: right;
+}
+
+.imagen_curso{
+width: 50%;
 }
