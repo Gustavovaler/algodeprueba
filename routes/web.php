@@ -81,4 +81,7 @@ Route::post('/ipn', function(){
     return response($jsonvari,201);
 });
 
+Route::get('/test', function(){
+    dd(storage_outside());
+});
 
