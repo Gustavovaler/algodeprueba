@@ -85,8 +85,3 @@ Route::get('/test', function(){
     dd(storage_outside());
 });
 
-// EJECUTAR LAS MIGRACIONES ya que en el Hosting no hay "php artisan"
-Route::get('install','InstallController@install');
- 
-// Refrescar la BBDD con datos falsos nuevos
-Route::get('refresh','InstallController@refresh');
