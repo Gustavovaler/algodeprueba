@@ -59,7 +59,7 @@ class CursosController extends Controller
         $curso->created_by = Auth::id();
         $imagen = $request->file('imagen');
         $nombre_imagen = time().$imagen->getClientOriginalName();
-        $path  = $imagen->storeAs('public/img', $nombre_imagen);        
+        $path  = $imagen->storeAs('img', $nombre_imagen);        
         $curso->imagen = 'img/'.$nombre_imagen;
         $curso->save();
         return redirect('/');

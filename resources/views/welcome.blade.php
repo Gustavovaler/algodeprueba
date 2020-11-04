@@ -3,9 +3,7 @@
 @section('content')
 <link rel="stylesheet" href="{{asset('css/welcome.css')}}">
 <link rel="stylesheet" href="{{asset('css/index.css')}}">
-<body>
-
-   
+<body>   
 	<div class="row">
 		
 		<div class="col-md-8  offset-md-2 text-center mt-5 bg-gray">
@@ -27,8 +25,9 @@
 			<img src="{{asset('img/olas.pn')}}g" alt="" class="olas">
 		</div>
 		</div>
-
+{{-- ****************************************************************************** --}}
 		
+		{{-- ****************************************************************************** --}}
 	<div class="container">
 		<div class="row text-center">
 			<div class="col-md-4 text-center ">

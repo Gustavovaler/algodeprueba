@@ -19,7 +19,7 @@
                  <h4 class="h5">Precio $ {{$curso->precio}}  </h4> 
              @endif
 
-             <img src="{{asset('storage/'.$curso->imagen)}}" alt="{{$curso->imagen}}" class="imagen_curso">
+             <img src="{{asset('/storage/app/'.$curso->imagen)}}" alt="{{$curso->imagen}}" class="imagen_curso">
                 <br>
           <a href="{{url('/cursos/'.$curso->id)}}" class="btn btn-primary info" >Mas Info...</a>
          </div>

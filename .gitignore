@@ -16,3 +16,4 @@ test_layout.*
 /img-test
 /layouts-dev
 /public/checkout.php
+.envPROD

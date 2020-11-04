@@ -78,9 +78,9 @@ class RegisterController extends Controller
             'pais' => $data['pais'],
             'password' => Hash::make($data['password']),
         ]);
-        $user_id = User::where('email', $user->email)->get();
-        $this->send_verification_mail($user_id, $user);
-        return $user;
+        // $user_id = User::where('email', $user->email)->get();
+        // $this->send_verification_mail($user_id, $user);
+        // return $user;
     }
     protected function send_verification_mail($user_id, $user)
     {
