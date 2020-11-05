@@ -3,8 +3,9 @@
 @section('content')
 <link rel="stylesheet" href="{{asset('css/welcome.css')}}">
 <link rel="stylesheet" href="{{asset('css/index.css')}}">
-<body>   
-	<div class="row">
+<body> 
+	<img src="{{asset('img/index_portada.jpg')}}" alt="Imagen de portada" class="img_portada">  
+	{{-- <div class="row">
 		
 		<div class="col-md-8  offset-md-2 text-center mt-5 bg-gray">
 			<h1 class="title-header">Formate y encontrá trabajo </h1>
@@ -28,7 +29,7 @@
 {{-- ****************************************************************************** --}}
 		
 		{{-- ****************************************************************************** --}}
-	<div class="container">
+	{{-- <div class="container">
 		<div class="row text-center">
 			<div class="col-md-4 text-center ">
 				<div class="img-card">
@@ -95,9 +96,9 @@
 					</div>					
 				</div>
 			</div>
-		</div>
+		</div> --}}
 <!-- ------------------------------------------------------------------------------------------- -->
-		
+{{-- 		
 		<div class="row mt-5">
 			
 			<div class="col-md-4">
@@ -242,7 +243,7 @@
 			</div>
 		</div>
 
-	</div><!--container-->
+	</div> --}}
 
 </body>    
 
