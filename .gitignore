@@ -17,3 +17,5 @@ test_layout.*
 /layouts-dev
 /public/checkout.php
 .envPROD
+.htaccess
+index.php
