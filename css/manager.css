@@ -1,7 +1,30 @@
 
+hr{
+    background-color: thistle;
+}
 .totales{
     font-size: 1.25em;
 }
-.title{
-    color: #336363;
+.table{
+    color: white;
+}
+.container-custom{
+    width: 96%;
+    margin: auto;
+}
+.section-title{
+    background-color: darkmagenta;
+    padding: 4px;
+}
+.ddw{
+    padding-top: 4px;
+}
+.btn-secondary{
+    background-color: rgb(31, 28, 31);
+}
+
+/* **************************************************************/
+.aside-left{
+    border: 1px solid white;
+    border-radius: 4px;
 }

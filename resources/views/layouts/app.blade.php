@@ -37,6 +37,10 @@
         .font-heebo{
             font-family: 'Heebo', sans-serif;
         }
+        .alert-secondary{
+            background-color: rgb(252, 63, 63);
+            
+        }
         
     </style>
 </head>
@@ -138,7 +142,7 @@
         @if (Auth::user() != null)
             @if (Auth::user()->is_admin == true)
               <div class="container">
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-secondary" role="alert">
                     Estas logueado como administrador. User: <b>{{Auth::user()->name}}</b>
                 </div>
             </div>  
