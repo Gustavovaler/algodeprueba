@@ -41,7 +41,7 @@
                       
                     <ul class="navbar-nav bg-dark navbar-dark mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link active " href="/">
+                            <a class="nav-link active " href="{{url('/')}}">
                                 {{-- <svg width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
                                     <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
@@ -56,28 +56,28 @@
                             <a class="nav-link active" href="/info">Info</a>
                         </li> --}}
                         <li class="nav-item">
-                            <a class="nav-link active" href="/cursos">Cursos</a>
+                            <a class="nav-link active" href="{{url('/cursos')}}">Cursos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/comments">Comunidad</a>
+                            <a class="nav-link active" href="{{url('/comments')}}">Comunidad</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/recursos">Recursos</a>
+                            <a class="nav-link active" href="{{url('/recursos')}}">Recursos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/desafios">Desafios</a>
+                            <a class="nav-link active" href="{{url('/desafios')}}">Desafios</a>
                         </li>
                         <li class="nav-item dropdown">
                         <a id="clasificadosdropdown" class="nav-link dropdown-toggle active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                <span class="caret"></span> Clasificados
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a href="/clasificados" class="dropdown-item">Ofrecidos</a>
+                            <a href="{{url('/clasificados')}}" class="dropdown-item">Ofrecidos</a>
                                 <a class="dropdown-item" href=""> Pedidos </a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/donate">Donar</a>
+                            <a class="nav-link active" href="{{url('/donate')}}">Donar</a>
                         </li>
                     </ul>
 
@@ -100,7 +100,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a href="/perfil" class="dropdown-item">Mi perfil</a>
+                                <a href="{{url('/perfil')}}" class="dropdown-item">Mi perfil</a>
                                      <hr>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
