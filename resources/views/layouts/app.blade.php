@@ -28,10 +28,14 @@
         }
         .navbar-dark{
             background-color: #18191c !important;
+            font-family: 'Heebo', sans-serif;
         }
         h1, h2, h3, h4, h5, h6,p,div{
             color: aliceblue !important;
             font-family: 'Roboto Slab', serif;
+        }
+        .font-heebo{
+            font-family: 'Heebo', sans-serif;
         }
         
     </style>
@@ -97,11 +101,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{ route('login') }}">Loguear</a>
+                                <a class="nav-link active font-heebo" href="{{ route('login') }}">Loguear</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="{{ route('register') }}">Registrarse</a>
+                                    <a class="nav-link active font-heebo" href="{{ route('register') }}">Registrarse</a>
                                 </li>
                             @endif
                         @else

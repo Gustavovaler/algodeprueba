@@ -5,6 +5,21 @@
 <link rel="stylesheet" href="{{asset('css/index.css')}}">
 <body> 
 	<img src="{{asset('img/index_portada.jpg')}}" alt="Imagen de portada" class="img_portada">  
+
+	
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div class="volanta">
+						<h1 class="volanta-text">La industria IT esta en crecimiento  constante.</h1>
+						<div class="separador">
+							
+						</div>
+				</div>
+
+			
+			</div>
+		</div>
+	
 	{{-- <div class="row">
 		
 		<div class="col-md-8  offset-md-2 text-center mt-5 bg-gray">

@@ -1,0 +1,20 @@
+
+.card{
+    background-color: #18191c !important;
+}
+.btn-primary{
+    background-color: darkmagenta !important;
+    outline-style: none;
+    box-shadow: none;
+    border-color: transparent !important;
+}
+.btn-primary:hover{
+    border-color: darkmagenta !important;
+    background-color: indigo!important;
+}
+.card-header{
+    background-color: darkmagenta !important;
+}
+.input-custom{
+    background-color: dimgray !important;
+}
