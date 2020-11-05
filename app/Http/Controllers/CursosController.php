@@ -57,6 +57,10 @@ class CursosController extends Controller
         $curso->precio = $request->input('precio');
         $curso->fecha_estreno = $request->input('fecha_estreno');
         $curso->created_by = Auth::id();
+        $curso->short_description =  $request->input('descripcion_corta');
+        $curso->horas = $request->input('horas');
+        $curso->clases =  $request->input('clases');
+        $curso->author = $request->input('autor');
         $imagen = $request->file('imagen');
         $nombre_imagen = time().$imagen->getClientOriginalName();
         $path  = $imagen->storeAs('img', $nombre_imagen);        

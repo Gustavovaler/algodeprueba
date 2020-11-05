@@ -32,6 +32,10 @@ width: 50%;
     text-decoration-line: none;
 }
 a:-webkit-any-link{
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration-line: none;
+}
+.portada{
+    width: 100%;
+    overflow: hidden;
 }
