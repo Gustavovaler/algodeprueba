@@ -1,3 +1,4 @@
+.index.php
 /node_modules
 /public/hot
 /public/storage
@@ -11,11 +12,9 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 *.zip
-.envPRO
 test_layout.*
 /img-test
 /layouts-dev
 /public/checkout.php
 .envPROD
 .htaccess
-index.php
