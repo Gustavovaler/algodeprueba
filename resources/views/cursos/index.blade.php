@@ -17,7 +17,7 @@
         <div class="col-md-9">
 
             @foreach ($cursos as $curso)
-            <hr>
+       
             <a href="{{url('/cursos/'.$curso->id)}}" class="link-custom">
                 <div class="card-custom shadow-sm bg-dark p-2">
                 <div class="row">
@@ -40,8 +40,8 @@
                         <div class="detalle-horas">
                             {{$curso->horas}} horas de material - {{$curso->clases}} clases
                         </div>                
-                    </div>
-                    <div class="col-md-2">
+                        </div>
+                        <div class="col-md-2">
                         <div class="title-custom">
                             @if ($curso->precio == 0)
                             <b>Precio $ <u><i> GRATIS</i></u></b>  </h4> 

@@ -12,4 +12,27 @@ body{
     width: 100%;
 }
 
+.volanta{
+    height: 6rem;
+    width: 70%;   
+    margin: auto;
+    margin-top: 2rem;
+    padding-top:2rem;    
+}
+.separador{
+    width: 50%;
+    height: 10px;
+    background-color: rgb(251, 255, 0);
+    margin: auto;
+    margin-top: 1em;
+}
 
+@media (max-width:360px){
+    .volanta{
+    margin-top: 1rem;
+    padding-top:1rem
+    }
+    .volanta-text{
+      font-size: 2em;
+  }
+}
