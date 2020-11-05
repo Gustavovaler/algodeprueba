@@ -66,7 +66,7 @@ class CursosController extends Controller
         $path  = $imagen->storeAs('img', $nombre_imagen);        
         $curso->imagen = 'img/'.$nombre_imagen;
         $curso->save();
-        return redirect('/');
+        return redirect('/manager');
     }
 
     /**
