@@ -25,6 +25,7 @@
         body{
             background-color: #2a2d32;
             font-family: 'Roboto Slab', serif;
+            font-size: 16px;
         }
         .navbar-dark{
             background-color: #18191c !important;
