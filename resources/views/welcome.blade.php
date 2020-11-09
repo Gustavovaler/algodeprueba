@@ -14,9 +14,7 @@
 						<div class="separador">
 							
 						</div>
-				</div>
-
-			
+				</div>			
 			</div>
 		</div>
 	
