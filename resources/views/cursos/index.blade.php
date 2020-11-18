@@ -5,32 +5,34 @@
 
 <img src="{{asset('img/cursos_portada.jpg')}}" alt="imagen de portada" class="portada">
 
-<div class="container-custom">
-
-    <div class="row">
-        <div class="col-md-3">
-            <hr>
-            <div class="card">
-
-            </div>
-        </div>
-        <div class="col-md-9">
+<div class="container-custom">      
 
             @foreach ($cursos as $curso)
-       
+            <div class="curso">
             <a href="{{url('/cursos/'.$curso->id)}}" class="link-custom">
-                <div class="card-custom shadow-sm bg-dark p-2">
-                <div class="row">
-                    <div class="col-md-3">
-                        <img src="{{asset('/storage/app/'.$curso->imagen)}}" alt="{{$curso->imagen}}" class="img-custom">
-                    </div>
-                    <div class="col-md-7">
-                        <div class="title-custom">
+              <div class="card-custom">
+                  <div class="img-container">
+                    <img src="{{asset('/storage/app/'.$curso->imagen)}}" alt="{{$curso->imagen}}" class="img-custom">
+                  </div>
+                  <div class="info-container">
+                       <div class="title-custom">
                             <b>{{$curso->titulo}}</b>
                         </div>
                         <div class="description-custom">
                             {{$curso->short_description}}
-                        </div>    
+                        </div> 
+                  </div>
+              </div>
+       
+            {{-- 
+                <div class="card-custom shadow-sm bg-dark p-2">
+                    <div class="row">
+                        <div class="col-md-3">
+                       
+                        </div>
+                        <div class="col-md-7">
+                       
+                           
                         <div class="author">
                             {{$curso->author}}
                         </div>  
@@ -51,12 +53,13 @@
                         </div>
                         
                     </div>
-                </div></a>
-            </div>
-              
+                </div>
+            </a>
+            </div> --}}
+    </div>          
            @endforeach
 
-        </div>
+        
     </div>
     
 
