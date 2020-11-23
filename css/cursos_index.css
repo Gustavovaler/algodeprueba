@@ -1,6 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif !important;
+}
+html{
+    font-size: 16px;
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,span,i,div,p{
+    color: black !important;
+}
 
+/*-----------------CONTENEDOR TOTAL ----*/
+.Cursoswrap{
+    width: 100% !important;
+    background: white !important;
+    min-height: 100vh !important;
+    padding: 50px 11px 35px 11px !important;
+}
+/*-----------------TITULO GENERAL ----*/
+.Cursoswrap h1{
+    font-size: 27px !important;
+    padding-bottom: 10px !important;
+    text-align: center !important;
+    font-weight: 800;
+}
+/*-----------------ENVOLTURA TOTAL CON HIPERVINCULO ----*/
+.Cursoswrap .cursowrapp-a{
+    display: flex !important;
+    width: 95% !important;
+    margin: auto !important;
+    text-decoration: none !important;
+    flex-wrap: wrap !important;
+}
+/*-----------------ALERTA GRIS ----*/
+.Cursoswrap .alertCurso{
+    background: #fbfbf8;
+    width: 95%;
+    margin: auto;
+    box-shadow: 0 0 3px lightgrey;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.Cursoswrap .alertCurso span{
+    margin-right: 20px;
+    font-size: 22px;
+    color: mediumvioletred;
+}
+.Cursoswrap .cursowrapp-a .menuLista{
+    width: 20%;
+}
+/*-----------------MENU LATERAL  ----*/
+.Cursoswrap .cursowrapp-a .menuLista ul{
+    list-style: none;
+}
+.Cursoswrap .cursowrapp-a .menuLista ul li{
+    text-decoration: none;
+    height: 67px;
+    color: black;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    font-weight: 700;
+    justify-content: space-between;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.Cursoswrap .cursowrapp-a .menuLista ul li span{
+    font-size: 12px;
+}
+.Cursoswrap .cursowrapp-a .cardList{
+    flex: 1;
+    padding-left: 11px;
+}
+/*-------------------CARDS--------*/
+.Cursoswrap .cursowrapp-a a .cardDetail{
+    width: 95%;
+    display: flex;
+    border-bottom: 1px solid lightgrey;
+    height: fit-content;
+    padding-bottom: 8px;
+    margin-left: 20px;
+}
+/*-----------------IMAGEN----*/
+.Cursoswrap .cursowrapp-a a{
+    text-decoration: none;
+    height: fit-content;
+    margin-top: 20px;
+    padding-left: 15px;
+    width: 77%;
+}
+.Cursoswrap .cursowrapp-a a .cardDetail .imagenCurso img{
+    width: 260px;
+    border-radius: 4px;
+    height: 146.25px;
+}
+.Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
+.Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosInfo{
+    padding: 0 20px;
+}
+.Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosInfo h2{
+    font-size: 18px;
+    color: black;
+    font-weight: 800;
+}
+.Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosInfo p{
+    font-size: 15px;
+    color: black;
+}
+
+.Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosPrecio h3{
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+.Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosPrecio h3  .currency{
+    margin-left: 12px;
+}
+
+/*----------Estilos de la portada----*/
 
 .portada{
     width: 100%;
     overflow: hidden;
+}
+
+
+@media(max-width: 450px){
+    .Cursoswrap h1{
+        font-size: 23px !important;
+    }
+    /*-------alert-------*/
+    .Cursoswrap .alertCurso{
+        font-size: 13px;
+    }
+    /*-------menu lateral-------*/
+    .Cursoswrap .cursowrapp-a .menuLista{
+       /* width: 100%;*/
+       display: none;
+    }
+    .Cursoswrap .cursowrapp-a{
+        margin: 0 !important;
+    }
+    .Cursoswrap .cursowrapp-a .cardList{
+        padding: 0 !important;
+    }
+    .Cursoswrap .cursowrapp-a a .cardDetail{
+        margin-left: 10px;
+        width: 99%;
+    }
+    /*-------imagen-------*/
+    .Cursoswrap .cursowrapp-a a .cardDetail .imagenCurso img{
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+    }
+    .Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosInfo .primerhijo{
+        display: none;
+    }
+    /*-------titulo-------*/
+    .Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosInfo h2{
+        font-size: 16px;
+    }
+
+    
+
+
 }
