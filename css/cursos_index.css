@@ -52,7 +52,7 @@ h1,h2,h3,h4,span,i,div,p{
 .Cursoswrap .alertCurso span{
     margin-right: 20px;
     font-size: 22px;
-    color: mediumvioletred;
+    color: mediumvioletred !important;
 }
 .Cursoswrap .cursowrapp-a .menuLista{
     width: 20%;
