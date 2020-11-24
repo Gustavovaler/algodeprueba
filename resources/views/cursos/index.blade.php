@@ -27,71 +27,34 @@
    
      <div class="cardList">
           <!--TARJETA-->
-            <a href="#"> 
-                 <div class="cardDetail">
-                       <div class="imagenCurso">
-                          <img src="{{asset('img/ang.png')}}" alt="">      
-                       </div>
-                     
-                     <div class="detailsWrapper">
-                           <div class="cursosInfo">
-                                <h2>Curso Integración Mercadopago Chekout-Pro  c/ PHP</h2>
-                                <p class="primerhijo"> Aprende a programar desde cero y desarrollo web con JavaScript, jQuery, JSON, TypeScript, Angular, Node, MEAN, +30 horas.</p>
-                                <p>54 horas en total * 502 clases * Principiantes.</p>
-                                <p>Gustavo Valerio</p>
-                           </div>
-         
-                         <div class="cursosPrecio">
-                             <h3>9.99<span class="currency">US$</span></h3>
-                         </div>
-                     </div>
-                 </div>
-            </a>
-      <!--TARJETA-->
-        <!--TARJETA-->
-        <a href="#"> 
+          @foreach ($cursos as $curso)
+          <a href="#"> 
             <div class="cardDetail">
                   <div class="imagenCurso">
-                     <img src="{{asset('img/dw.png')}}" alt="">      
+                     <img src="{{asset('/storage/app/'.$curso->imagen)}}" alt="">      
                   </div>
                 
                 <div class="detailsWrapper">
                       <div class="cursosInfo">
-                           <h2>Curso Integración Mercadopago Chekout-Pro  c/ PHP</h2>
-                           <p class="primerhijo"> Aprende CSS3, Maquetación web, Responsive Web Design, SASS, LESS, Flexbox, CSS Grid Layout y Bootstrap 4 desde cero +20h.</p>
-                           <p>54 horas en total * 502 clases * Principiantes.</p>
-                           <p>Gustavo Valerio</p>
+                           <h2>{{$curso->titulo}}</h2>
+                           <p class="primerhijo">{{$curso->short_description}}</p>
+                           <p>Horas {{$curso->horas}} * Clases {{$curso->clases}} * Nivel: Todos</p>
+                           <p>{{$curso->author}}</p>
                       </div>
     
                     <div class="cursosPrecio">
-                        <h3>9.99<span class="currency">US$</span></h3>
+                        @if ($curso->precio != 0)
+                            <h3 class="price"><span class="currency">$ </span>{{$curso->precio}}</h3>
+                        @else 
+                        <h3 class="price"><u>Gratis !!</u></h3>
+                        @endif
+                        
                     </div>
                 </div>
             </div>
        </a>
- <!--TARJETA-->
-   <!--TARJETA-->
-   <a href="#"> 
-    <div class="cardDetail">
-          <div class="imagenCurso">
-             <img src="{{asset('img/ang.png')}}" alt="">      
-          </div>
-        
-        <div class="detailsWrapper">
-              <div class="cursosInfo">
-                   <h2>Curso Integración Mercadopago Chekout-Pro  c/ PHP</h2>
-                   <p class="primerhijo"> Aprende a programar desde cero y desarrollo web con JavaScript, jQuery, JSON, TypeScript, Angular, Node, MEAN, +30 horas.</p>
-                   <p>54 horas en total * 502 clases * Principiantes.</p>
-                   <p>Gustavo Valerio</p>
-              </div>
+          @endforeach
 
-            <div class="cursosPrecio">
-                <h3>9.99<span class="currency">US$</span></h3>
-            </div>
-        </div>
-    </div>
-</a>
-<!--TARJETA-->
      </div>
     
 </div>    <!--WRAPP-A -->

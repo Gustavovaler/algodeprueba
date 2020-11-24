@@ -12,14 +12,14 @@ html{
 body{
     overflow-x: hidden;
 }
-h1,h2,h3,h4,span,i,div,p{
-    color: black !important;
-}
+/* h1,h2,h3,h4,span,i,div,p{
+    color: #ffffff !important;
+} */
 
 /*-----------------CONTENEDOR TOTAL ----*/
 .Cursoswrap{
     width: 100% !important;
-    background: white !important;
+    background: #18191c !important;
     min-height: 100vh !important;
     padding: 50px 11px 35px 11px !important;
 }
@@ -40,7 +40,7 @@ h1,h2,h3,h4,span,i,div,p{
 }
 /*-----------------ALERTA GRIS ----*/
 .Cursoswrap .alertCurso{
-    background: #fbfbf8;
+    background: #18191c;
     width: 95%;
     margin: auto;
     box-shadow: 0 0 3px lightgrey;
@@ -65,7 +65,7 @@ h1,h2,h3,h4,span,i,div,p{
 .Cursoswrap .cursowrapp-a .menuLista ul li{
     text-decoration: none;
     height: 67px;
-    color: black;
+    color: #ffffff;
     border-bottom: 1px solid lightgrey;
     display: flex;
     align-items: center;
@@ -113,18 +113,18 @@ h1,h2,h3,h4,span,i,div,p{
 }
 .Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosInfo h2{
     font-size: 18px;
-    color: black;
+    color: #ffffff;
     font-weight: 800;
 }
 .Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosInfo p{
     font-size: 15px;
-    color: black;
+    color: #ffffff;
 }
 
 .Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosPrecio h3{
     font-size: 16px;
     font-weight: bold;
-    color: black;
+    color: #ffffff;
 }
 .Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosPrecio h3  .currency{
     margin-left: 12px;
