@@ -60,6 +60,7 @@ h1,h2,h3,h4,span,i,div,p{
 /*-----------------MENU LATERAL  ----*/
 .Cursoswrap .cursowrapp-a .menuLista ul{
     list-style: none;
+    border-left: 12px solid mediumvioletred;
 }
 .Cursoswrap .cursowrapp-a .menuLista ul li{
     text-decoration: none;
