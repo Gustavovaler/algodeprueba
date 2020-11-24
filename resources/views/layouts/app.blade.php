@@ -22,6 +22,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
+        html{
+            font-family: 'Roboto Slab', serif;
+            font-size: 16px;
+        }
         body{
             background-color: #2a2d32;
             font-family: 'Roboto Slab', serif;

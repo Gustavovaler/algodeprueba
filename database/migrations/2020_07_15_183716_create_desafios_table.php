@@ -15,8 +15,8 @@ class CreateDesafiosTable extends Migration
     {
         Schema::create('desafios', function (Blueprint $table) {
             $table->id();
-            $table->text('body_text')->default("");
-            $table->integer('created_by')->nullable()->default(null);
+            $table->text('body_text');
+            $table->unsignedBigInteger('created_by');
             $table->string('main_lang');
             $table->string('sec_lang')->nullable()->default("");
             $table->integer('recomended_lvl')->default(1);
