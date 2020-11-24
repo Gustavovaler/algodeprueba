@@ -28,7 +28,7 @@
      <div class="cardList">
           <!--TARJETA-->
           @foreach ($cursos as $curso)
-          <a href="#"> 
+     <a href="{{url('/cursos/'.$curso->id)}}"> 
             <div class="cardDetail">
                   <div class="imagenCurso">
                      <img src="{{asset('/storage/app/'.$curso->imagen)}}" alt="">      
