@@ -167,6 +167,9 @@ h1,h2,h3,h4,span,i,div,p{
         height: 64px;
         object-fit: cover;
     }
+    .Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosInfo p{
+        margin-bottom: 10px;
+    }
     .Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosInfo .primerhijo{
         display: none;
     }
