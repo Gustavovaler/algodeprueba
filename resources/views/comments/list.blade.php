@@ -3,7 +3,7 @@
 @section('content')
 
 <link rel="stylesheet" href="{{asset('css/comun.css')}}">
-
+<link rel="stylesheet" href="{{asset('css/comunidad/index.css')}}">
 
 <div class="container mt-4">
   
@@ -80,7 +80,7 @@
             <br>
            
             <br>
-            <a href="/login" class="btn btn-primary float-right mb-5">Comentar</a>  
+            <a href="{{url('/login')}}" class="btn btn-warning float-right mb-5">Comentar</a>  
             <br><br><br><br>     
         @endif
     </div>

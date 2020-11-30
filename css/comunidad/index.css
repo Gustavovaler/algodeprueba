@@ -1,0 +1,17 @@
+
+
+.comment{
+    background-color: #18191c !important;
+}
+.card{
+    background-color: #212529 !important;
+}
+.card-header{
+    background-color: darkmagenta;
+}
+#exampleFormControlTextarea1{
+    margin-left: 25px;
+}
+.pagination{
+    margin-left: 25px;
+}
