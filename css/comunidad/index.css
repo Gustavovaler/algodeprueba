@@ -1,17 +1,24 @@
 
-
+/*---- Contenedor de comentarios-----------------------*/
 .comment{
     background-color: #18191c !important;
 }
+/* ------- Hilo de comentario  */
 .card{
     background-color: #212529 !important;
 }
+
+/* ---- Header de tarjeta ------ */
 .card-header{
     background-color: darkmagenta;
 }
+
+/* ---- text area de comentarios */
 #exampleFormControlTextarea1{
     margin-left: 25px;
 }
+
+/* --- Paginacion de laravel */
 .pagination{
     margin-left: 25px;
 }
