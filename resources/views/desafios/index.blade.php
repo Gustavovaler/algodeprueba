@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-
+<!--  Estilos -->
+<link rel="stylesheet" href="{{asset('css/desafios/index.css')}}">
 
 <div class="container">
     <div class="row mt-5">
