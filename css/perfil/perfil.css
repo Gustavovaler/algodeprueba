@@ -1,0 +1,18 @@
+
+
+.avatar{
+    width: 250px;
+    height: 250px;
+    border: 10px solid  darkmagenta;
+    border-radius: 50%; 
+
+}
+.image-container{
+    width: 272px;
+    margin: auto;
+}
+
+.left-container{
+    min-height: 250px;
+    width: 100%;
+}

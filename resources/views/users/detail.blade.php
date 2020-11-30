@@ -1,7 +1,37 @@
 @extends('layouts.app')
 
 @section('content')
-<link rel="stylesheet" href="{{asset('css/perfil.css')}}">
+<link rel="stylesheet" href="{{asset('css/perfil/perfil.css')}}">
+
+
+    <div class="container mt-2">
+
+        <div class="row">            
+            <div class="col-md-6 left-container">              
+               <br>              
+                   Mis datos:
+                   <br>
+                   Nombre: {{$user_data->name}} <br>
+                   E-mail: {{$user_data->email}}<br>
+                   Genero: {{$user_data->genero}}<br>
+                   Pais: {{$user_data->pais}} <br>
+                   WhatsApp: {{$user_data->whatsapp}}<br>
+                   Lvl: {{$user_data->lvl}}<br>
+                   Puntos: {{$user_data->exp_point}}<br>  
+                   Votos: {{$perfil_data->votes}} <br>           
+            </div>
+
+            <div class="col-md-6">
+                <div class="image-container">
+                    <img src="{{asset('/storage/app/avatar/'.$perfil_data->avatar)}}"  class="avatar">
+                </div>
+            </div>       
+           
+        </div>
+            
+    </div>
+
+
 {{-- 
     <div class="container mt-4">   
         <div class="row">
@@ -23,26 +53,6 @@
             </div>
         </div>
        --}}
-
-
-
-
-    </div>
-    <div class="container mt-2">
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="banner-central">
-
-                </div>
-                <div class="avatar">
-                    
-                </div>
-            </div>
-
-        </div>
-            
-    </div>
            
     
     

@@ -20,8 +20,8 @@ class UserController extends Controller
     public function show(Request $request)
     {
         if (null !== Auth::id()){
-            $user_data = User::where('id',Auth::id())->get();
-            $perfil_data = Perfil::where('user_id',Auth::id())->get();
+            $user_data = User::find(Auth::id());
+            $perfil_data = Perfil::where('user_id',Auth::id())->first();
             
             return view('users.detail', compact('user_data', 'perfil_data'));
         }
