@@ -3,7 +3,7 @@
         <div class="child_response">
             <form action="" class="formulario" v-on:submit.prevent>
                 <input type="text" class="form-control float-right" v-model="rta" required @keyup.enter="enviarRespuesta">
-                <span class="btn btn-outline-primary float-right" @click="enviarRespuesta" >Responder</span>
+                <span class="btn btn-outline-warning float-right" @click="enviarRespuesta" >Responder</span>
             </form>
         </div> <br>
         <div class="respuestas">
@@ -19,8 +19,7 @@
             </div>
         </div>
 
-</div>    
-    
+</div>        
 </template>
 
 
