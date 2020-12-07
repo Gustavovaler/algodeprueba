@@ -26,6 +26,42 @@ body{
     margin: auto;
     margin-top: 1em;
 }
+.card{
+    background-color: #212124;
+}
+
+.card-img  {
+    width: 60%;
+    margin-left: 20%;
+}
+
+
+@media (max-width:902px){
+    .volanta{
+        margin-top: 1rem;
+        padding-top:1rem;
+        margin-bottom: 25px;
+        }
+        .volanta-text{
+          font-size: 1.3em;
+      }
+      .card{
+          margin-bottom: 5px;
+      }
+}
+
+@media  (max-width:640px){
+    .volanta{
+        margin-top: 1rem;
+        padding-top:1rem
+        }
+        .volanta-text{
+          font-size: 1.4em;
+      }
+      .card{
+        margin-bottom: 5px;
+    }
+}
 
 @media (max-width:360px){
     .volanta{
@@ -33,6 +69,9 @@ body{
     padding-top:1rem
     }
     .volanta-text{
-      font-size: 2em;
+      font-size: 1.3em;
   }
+  .card{
+    margin-bottom: 5px;
+}
 }
