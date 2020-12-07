@@ -35,6 +35,26 @@ body{
     margin-left: 20%;
 }
 
+#ola1{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    overflow: hidden;
+}
+#img-info-1{
+    width: 100%;
+}
+#copete1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.low-section{
+    background-color: yellow;
+    width: 100%;
+    height: 250px;
+    padding: 0;
+    margin: 0;
+}
 
 @media (max-width:902px){
     .volanta{

@@ -21,6 +21,7 @@
 	<hr>
 <main>
 	<div class="container">
+		{{-- fila 2  --}}
 		<div class="row mt-4">
 			{{-- --------------------- --}}
 			<div class="col-md-4">
@@ -52,7 +53,7 @@
 							pariatur vero delectus aliquam! Commodi dolorem quidem provident.
 							</p>
 							<br>
-							<img src="{{asset('img/bit7.png')}}" class="card-img">
+							<img src="{{asset('img/bit8.png')}}" class="card-img">
 						</div>
 					</div>					
 				</article>
@@ -69,17 +70,39 @@
 							pariatur vero delectus aliquam! Commodi dolorem quidem provident.
 							</p>							
 							<br>
-							<img src="{{asset('img/bit7.png')}}" class="card-img">
+							<img src="{{asset('img/bit9.png')}}" class="card-img">
 						</div>
 					</div>					
 				</article>
 			</div>
 		
+		</div>
+			<hr>
+			{{-- fila 3 --}}
+			<div class="row mt-4">
+				<div class="col-md-8">
+					<img src="{{asset('img/bit3.png')}}" alt="foto de caracteristica" id="img-info-1">
+				</div>
+			
+				<div class="col-md-4 p-2">
+					<h4 id="copete1">Tres simples palabras</h4>
+					<h2>Todos tus conocimientos valen</h2>
+					<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+					Est fugiat eius mollitia vitae voluptatum, velit, 
+					nesciunt voluptatibus dignissimos nemo neque 
+					hic sed iste nam eveniet totam rem harum suscipit molestias.
+				</p>
+				</div>
+			</div>
+
+		</div> {{--container--}}
+		<img src="{{asset('img/olas.png')}}" alt="olas" id="ola1">	
+		<div class="low-section">
 
 		</div>
-
-	</div>
 </main>	
+
 
 </body>    
 
