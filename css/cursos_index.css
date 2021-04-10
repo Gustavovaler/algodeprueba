@@ -119,6 +119,10 @@ body{
 .Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosInfo p{
     font-size: 15px;
     color: #ffffff;
+    margin: 0 0 13px;
+}
+.Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosPrecio{
+    min-width: 100px;
 }
 
 .Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosPrecio h3{
@@ -137,7 +141,61 @@ body{
     overflow: hidden;
 }
 
+/*----------------------------------*/
 
+@media(max-width: 710px){
+    .Cursoswrap h1{
+        font-size: 23px !important;
+    }
+    /*-------alert-------*/
+    .Cursoswrap .alertCurso{
+        font-size: 13px;
+        height: 18vh;
+    }
+    /*-------menu lateral-------*/
+    .Cursoswrap .cursowrapp-a .menuLista{
+       /* width: 100%;*/
+       display: none;
+    }
+    .Cursoswrap .cursowrapp-a{
+        margin: 0 !important;
+    }
+    .Cursoswrap .cursowrapp-a .cardList{
+        padding: 0 !important;
+    }
+    .Cursoswrap .cursowrapp-a a .cardDetail{
+        margin-left: 10px;
+        width: 99%;
+    }
+    .Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper{
+        flex-direction: column;
+    }
+    /*-------imagen-------*/
+    .Cursoswrap .cursowrapp-a a .cardDetail .imagenCurso img{
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+    }
+    .Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosInfo p{
+        margin-bottom: 10px;
+    }
+    .Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosInfo .primerhijo{
+        display: none;
+    }
+    /*-------titulo-------*/
+    .Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosInfo h2{
+        font-size: 16px;
+    }
+    .Cursoswrap .cursowrapp-a a .cardDetail .detailsWrapper .cursosPrecio h3{
+        text-align: end;
+    }
+
+    
+
+
+}
+
+/*----------------------------------*/
 @media(max-width: 450px){
     .Cursoswrap h1{
         font-size: 23px !important;
@@ -145,6 +203,8 @@ body{
     /*-------alert-------*/
     .Cursoswrap .alertCurso{
         font-size: 13px;
+        height: 10vh;
+        padding: 0 10px;
     }
     /*-------menu lateral-------*/
     .Cursoswrap .cursowrapp-a .menuLista{

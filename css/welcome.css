@@ -26,6 +26,62 @@ body{
     margin: auto;
     margin-top: 1em;
 }
+.card{
+    background-color: #212124;
+}
+
+.card-img  {
+    width: 60%;
+    margin-left: 20%;
+}
+
+#ola1{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    overflow: hidden;
+}
+#img-info-1{
+    width: 100%;
+}
+#copete1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.low-section{
+    background-color: yellow;
+    width: 100%;
+    height: 250px;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width:902px){
+    .volanta{
+        margin-top: 1rem;
+        padding-top:1rem;
+        margin-bottom: 25px;
+        }
+        .volanta-text{
+          font-size: 1.3em;
+      }
+      .card{
+          margin-bottom: 5px;
+      }
+}
+
+@media  (max-width:640px){
+    .volanta{
+        margin-top: 1rem;
+        padding-top:1rem
+        }
+        .volanta-text{
+          font-size: 1.4em;
+      }
+      .card{
+        margin-bottom: 5px;
+    }
+}
 
 @media (max-width:360px){
     .volanta{
@@ -33,6 +89,9 @@ body{
     padding-top:1rem
     }
     .volanta-text{
-      font-size: 2em;
+      font-size: 1.3em;
   }
+  .card{
+    margin-bottom: 5px;
+}
 }

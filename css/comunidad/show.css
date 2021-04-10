@@ -1,0 +1,16 @@
+/* estilos de cursos.show */
+
+.card{
+    background-color:  #212529 !important;
+}
+.card-header{
+    background-color: darkmagenta;
+}
+
+.image{
+    width: 100%;
+}
+
+.descripcion{
+    padding: 15px 5px;
+}

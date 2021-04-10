@@ -78,7 +78,8 @@ class CursosController extends Controller
     public function show($id)
     {
         $curso = Curso::find($id);
-        return view('cursos.show', compact('curso'));
+        $autor = User::find($curso->created_by);
+        return view('cursos.show', compact('curso', 'autor'));
     }
 
     /**
